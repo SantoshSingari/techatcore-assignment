@@ -20,9 +20,15 @@ ___
 
 ___
 
+## How to build
+`gatsby build`
 
-## ❤️ Credits
-Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
+## View the production site locally
+`gatsby serve`
+
+## How to release
+Run `gatsby build`
+Push the content of public folder to anywhere and serve
 
 ## 💫 Deploy
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/resir014/gatsby-starter-typescript-plus)
