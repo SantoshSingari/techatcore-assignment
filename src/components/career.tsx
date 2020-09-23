@@ -20,10 +20,13 @@ const Vivek = require("../images/team/Vivek.jpg") as string;
 
 const BgShade = styled.div`
   position: absolute;
-  width: 1920px;
+  max-width: 1920px;
+  width:100%;
   height: 429px;
   left: 0px;
   top: 0px;
+  display:flex;
+  align-item:center;
 
   background: #000000;
   border: 1px solid #000000;
@@ -34,23 +37,27 @@ const HeadTitle = styled(Title)`
   position: absolute;
   width: 202px;
   height: 65px;
-  left: 859px;
+  left: 40%;
   top: 247px;
 
   color: #ffffff;
 `;
 
 const WhyContainer = styled.div`
-  position: absolute;
-  width: 817px;
+  position:absolute;
+  max-width: 817px;
+  width:60%;
   height: 534px;
-  left: 552px;
+  left:25%;
+  display:flex;
   top: 597px;
+  text-align:center;
 `;
 
 const WhyTitle = styled(Title)`
   position: absolute;
-  width: 817px;
+  max-width: 817px;
+  width:60%;
   height: 534px;
   left: 172px;
   top: 0px;
@@ -78,45 +85,63 @@ const Desc = styled.p`
 const Break = styled.br``;
 
 const ValuesContainer = styled.div`
-  position: absolute;
-  width: 1920px;
+  position:absolute;
+  max-width: 1920px;
+  width:100%;
   height: 945px;
   left: 0px;
   top: 1286px;
+  display: flex;
+  flex-direction:column;
+  padding-right:143px;
+  padding-left:143px;
 `;
 
 const ValueTitle = styled(Title)`
   position: absolute;
-  width: 276px;
+  max-width: 276px;
   height: 64px;
-  left: 822px;
+  left: 40%;
   top: 183px;
   color: #000000;
 `;
 
-type ValueProps = {
-  left: string;
-};
-
+const ValueIncontainer = styled.div`
+postion:absolute;
+max-width:1920px;
+width:100%;
+height:505px;
+margin-top:400px;
+display: flex;
+flex-direction:row;
+justify-content:space-around;
+`;
+const ValueBlock = styled.div`
+postion:relative;
+max-width:600px;
+width:100%;
+height:505px;
+top:0px;
+display: flex;
+margin-right:50px;
+align-items:left;
+flex-direction:column;
+`;
 const ValueImg = styled.img`
-  position: absolute;
-  width: 60px;
+  // position: absolute;
+  max-width: 60px;
+  width:100%;
   height: 60px;
-  top: 455px;
-  left: ${(props: ValueProps) => props.left};
+  margin-top:16px;
 `;
 
-type ValueoneProps = {
-  width: string;
-  left: string;
-};
 
 const ValueOne = styled.div`
-  position: absolute;
-  width: ${(props: ValueoneProps) => props.width};
-  height: 72.46px;
-  left: ${(props: ValueoneProps) => props.left};
-  top: 564.87px;
+  // position: absolute;
+  max-width: 226px;
+  width:100%;
+  height: 72.46px; 
+  margin-top:50px;
 
   font-family: Nunito;
   font-style: normal;
@@ -126,16 +151,12 @@ const ValueOne = styled.div`
   color: #363636;
 `;
 
-type ValuedescProps = {
-  left: string;
-};
-
 const ValueDesc = styled.p`
-  position: absolute;
-  width: 437px;
+  // position: absolute;
+  max-width: 437px;
+  width:100%;
   height: 81.35px;
-  left: ${(props: ValuedescProps) => props.left};
-  top: 683.25px;
+  margin-top: 50px;
 
   font-family: Nunito;
   font-style: normal;
@@ -149,19 +170,23 @@ const ValueDesc = styled.p`
 `;
 
 const TechContainer = styled.div`
-  position: absolute;
-  width: 1661px;
-  height: 412px;
-  left: 146px;
-  top: 2415px;
-`;
+position: absolute;
+max-width: 1661px;
+width:100%;
+height: 412px;
+top: 2415px;
+display:flex;
+padding:50px;
+flex-direction:column;
+align-items:center;
 
+`;
 const TechTitle = styled.div`
   position: absolute;
-  width: 478px;
+  max-width: 478px;
+  width:100%
   height: 64px;
-  left: 591px;
-  top: 0px;
+  display:flex;
 
   font-family: Nunito;
   font-style: normal;
@@ -171,30 +196,42 @@ const TechTitle = styled.div`
   color: #000000;
 `;
 
-type TickProps = {
-  left: string;
-  top: string;
-};
+const TickContainer = styled.div`
+position:absolute;
+max-width:1920px;
+width:100%;
+height:262px;
+top:150px;
+display:flex;
+flex-wrap:wrap;
+margin-right:50px;
+`;
+
+const TechBox = styled.div`
+postion:absolute;
+max-width:400px;
+width:100%;
+margin:20px;
+height:60px;
+display:flex;
+flex-direction:row;
+align-items:center;
+`;
 
 const TechTick = styled.img`
   position: absolute;
   width: 40px;
   height: 40px;
-  left: ${(props: TickProps) => props.left};
-  top: ${(props: TickProps) => props.top};
+  // display:flex;
+  // padding:10px;
 `;
-
-type TickdescProps = {
-  left: string;
-  top: string;
-};
 
 const TechDesc = styled.div`
   position: absolute;
-  width: 226px;
+  max-width: 226px;
   height: 56px;
-  left: ${(props: TickdescProps) => props.left};
-  top: ${(props: TickdescProps) => props.top};
+  display:flex;
+  margin-left:50px;
 
   font-family: Nunito;
   font-style: normal;
@@ -206,18 +243,25 @@ const TechDesc = styled.div`
 
 const TeamContainer = styled.div`
   position: absolute;
-  width: 1920px;
+  max-width: 1920px;
+  width:100%;
   height: 2087px;
   left: 0px;
   top: 3046px;
   background: #e5e5e5;
+  display:flex;
+  flex-direction:column;
+  align-items-center;
 `;
+
 
 const TeamTitle = styled.div`
   position: absolute;
-  width: 315px;
+  max-width: 315px;
+  width:100%;
+  left:40%;
+  justify-content:center;
   height: 63.56px;
-  left: 780px;
   top: 183.02px;
 
   font-family: Nunito;
@@ -229,32 +273,42 @@ const TeamTitle = styled.div`
 
   color: #000000;
 `;
+const MemberContainer = styled.div`
+position:absolute;
+max-width:1920x;
+width:100%;
+height:1664px;
+display:flex;
+flex-wrap:wrap;
+top:250px;
 
-type TeamProps = {
-  left: string;
-  top: string;
-};
+`;
+
+const TeamBox = styled.div`
+position: relative;
+max-width: 368px;
+width:100%;
+height: 453px;
+display:flex;
+margin-left:80px;
+flex-direction:column;
+align-items:left;
+`;
 
 const TeamMember = styled.img`
   position: absolute;
-  width: 368px;
+  max-width: 368px;
+  width:100%;
   height: 342px;
-  left: ${(props: TeamProps) => props.left};
-  top: ${(props: TeamProps) => props.top};
   background: #ffffff;
 `;
 
-type NameProps = {
-  left: string;
-  top: string;
-};
-
 const MemberName = styled.div`
   position: absolute;
-  width: 226px;
+  max-width: 226px;
+  width:100%;
   height: 72.46px;
-  left: ${(props: NameProps) => props.left};
-  top: ${(props: NameProps) => props.top};
+  top:366px;
 
   font-family: Nunito;
   font-style: normal;
@@ -264,17 +318,13 @@ const MemberName = styled.div`
   color: #363636;
 `;
 
-type TechnameProps = {
-  left: string;
-  top: string;
-};
 
 const TechName = styled.div`
   position: absolute;
-  width: 152px;
+  max-width: 152px;
+  width:100%;
   height: 38px;
-  left: ${(props: TechnameProps) => props.left};
-  top: ${(props: TechnameProps) => props.top};
+  top:415px;
 
   font-family: Nunito;
   font-style: normal;
@@ -286,26 +336,55 @@ const TechName = styled.div`
 
 const BlogContainer = styled.div`
   position: absolute;
-  width: 1641px;
+ max-width: 1641px;
+ width:100%;
   height: 979px;
-  left: 140px;
+  display:flex;
+  flex-direction:column;
+  align-items-center;
   top: 5319px;
+  border:5px solid red;
 `;
 
-type BlogProps = {
-  left: string;
-};
-const SubBlog = styled.div`
+const BlogTitle = styled.div`
   position: absolute;
-  width: 791px;
+  max-width: 640px;
+  height: 94px;
+  top:0px;
+
+
+
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 46px;
+  color: #363636;
+`;
+const Container = styled.div`
+position:absolute;
+max-width:1641px;
+width:100%;
+height:718px;
+margin-top:261px;
+display:flex;
+flex-wrap:wrap;
+`;
+const SubBlog = styled.div`
+  position:absolute;
+  max-width: 791px;
   height: 718px;
-  left: ${(props: BlogProps) => props.left};
-  top: 261px;
+  display:flex;
+margin-top:5px;
+margin-right:2px;
+margin-left:5px;
+flex-direction:column;
+align-items:left;
 `;
 
 const Group = styled.div`
   position: absolute;
-  width: 680px;
+  max-width: 680px;
   height: 285px;
   left: 55px;
   top: 57px;
@@ -317,30 +396,17 @@ const Group = styled.div`
 
 const ImageLogo = styled.img`
   position: absolute;
-  width: 506px;
+  max-width: 506px;
   height: 275px;
   left: 76px;
   top: 5px;
 `;
 
-const BlogTitle = styled.div`
-  position: absolute;
-  width: 640px;
-  height: 94px;
-  left: 55px;
-  top: 377px;
 
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 34px;
-  line-height: 46px;
-  color: #363636;
-`;
 
 const Time = styled.div`
   position: absolute;
-  width: 152px;
+  max-width: 152px;
   height: 38px;
   left: 55px;
   top: 508px;
@@ -355,17 +421,18 @@ const Time = styled.div`
 
 const BlogMainTitle = styled(Title)`
   position: absolute;
-  width: 128px;
+  max-width: 128px;
+  width:100%;
   height: 64px;
   left: 756px;
-  top: 0px;
+  top: 377px;
 
   color: #000000;
 `;
 
 const BlogName = styled.div`
   position: absolute;
-  width: 253px;
+  max-width: 253px;
   height: 63px;
   left: 55px;
   top: 579px;
@@ -380,7 +447,7 @@ const BlogName = styled.div`
 
 const Department = styled.div`
   position: absolute;
-  width: 152px;
+  max-width: 152px;
   height: 38px;
   left: 55px;
   top: 620px;
@@ -424,153 +491,181 @@ export default class career extends Component {
         </WhyContainer>
         <ValuesContainer>
           <ValueTitle>Our values</ValueTitle>
-          <ValueImg src={valuepath} left="146px"></ValueImg>
-          <ValueOne width="226px" left="146px">
-            Being Human
+          
+          <ValueIncontainer>
+            
+            <ValueBlock>
+          <ValueImg src={valuepath}></ValueImg>
+          <ValueOne>
+            Being&nbsp;Human
           </ValueOne>
-          <ValueDesc left="146px">
+          <ValueDesc>
             We are human-first approach company and everything comes next.
           </ValueDesc>
-          <ValueImg src={valuepath} left="720px"></ValueImg>
-          <ValueOne width="264px" left="720px">
-            Unblock people
+          </ValueBlock>
+         
+          <ValueBlock>
+          <ValueImg src={valuepath}></ValueImg>
+          <ValueOne>
+            Unblock&nbsp;people
           </ValueOne>
-          <ValueDesc left="720px">
+          <ValueDesc>
             Helping the team or people around is always comes as a top priority
           </ValueDesc>
-          <ValueImg src={valuepath} left="1370px"></ValueImg>
-          <ValueOne width="437px" left="1370px">
-            Lead by example mindset
+          </ValueBlock>
+          
+          <ValueBlock>
+          <ValueImg src={valuepath}></ValueImg>
+          <ValueOne>
+            Lead&nbsp;by&nbsp;example&nbsp;mindset
           </ValueOne>
-          <ValueDesc left="1370px">
+          <ValueDesc>
             Inspire everyone and set the trend and show how to.
           </ValueDesc>
+          </ValueBlock>
+         
+        </ValueIncontainer>
+        
         </ValuesContainer>
         <TechContainer>
-          <TechTitle>Life at tech.at.core</TechTitle>
-          <TechTick src={tickpath} left="0px" top="232px"></TechTick>
-          <TechDesc left="72px" top="232px">
+          <TechTitle>Life&nbsp;at&nbsp;tech.at.core</TechTitle>
+          
+          <TickContainer>
+          <TechBox>
+          <TechTick src={tickpath}></TechTick>
+          <TechDesc>
             Being&nbsp;Human
           </TechDesc>
-          <TechTick src={tickpath} left="557px" top="232px"></TechTick>
-          <TechDesc left="629px" top="232px">
+          </TechBox>
+
+          <TechBox>
+          <TechTick src={tickpath}></TechTick>
+          <TechDesc>
             Unblock&nbsp;people
           </TechDesc>
-          <TechTick src={tickpath} left="1152px" top="232px"></TechTick>
-          <TechDesc left="1224px" top="232px">
+          </TechBox>
+
+          <TechBox>
+          <TechTick src={tickpath}></TechTick>
+          <TechDesc>
             Lead&nbsp;by&nbsp;example&nbsp;mindset
           </TechDesc>
-          <TechTick src={tickpath} left="0px" top="364px"></TechTick>
-          <TechDesc left="72px" top="363px">
+          </TechBox>
+
+          <TechBox>
+          <TechTick src={tickpath}></TechTick>
+          <TechDesc>
             Flexible&nbsp;working&nbsp;hours
           </TechDesc>
-          <TechTick src={tickpath} left="557px" top="364px"></TechTick>
-          <TechDesc left="629px" top="364px">
+          </TechBox>
+
+          <TechBox>
+          <TechTick src={tickpath}></TechTick>
+          <TechDesc>
             Flexible&nbsp;working&nbsp;machine
           </TechDesc>
+          </TechBox>
+          </TickContainer>
         </TechContainer>
+        
         <TeamContainer>
           <TeamTitle>Our team</TeamTitle>
-          <TeamMember left="136px" top="423px" src={Jay}></TeamMember>
-          <MemberName left="136px" top="789px">
-            Jayasagar&nbsp;Jagirapu
-          </MemberName>
-          <TechName left="136px" top="838px">
-            Founder
-          </TechName>
-          <TeamMember left="562px" top="423px" src={Prasad}></TeamMember>
-          <MemberName left="562px" top="789px">
-            Prasad&nbsp;Jagirapu
-          </MemberName>
-          <TechName left="562px" top="838px">
-            Administration&nbsp;Head
-          </TechName>
-          <TeamMember left="988px" top="423px" src={Raju}></TeamMember>
-          <MemberName left="988px" top="789px">
-            Raju&nbsp;Sidda
-          </MemberName>
-          <TechName left="988px" top="838px">
-            Senior&nbsp;Software&nbsp;Engineer
-          </TechName>
-          <TeamMember left="1414px" top="423px" src={Chetan}></TeamMember>
-          <MemberName left="1414px" top="789px">
-            Cheatn&nbsp;Kumar&nbsp;Bandari
-          </MemberName>
-          <TechName left="1414px" top="838px">
-            DevOps&nbsp;Engineer
-          </TechName>
-          <TeamMember left="136px" top="939px" src={Vandana}></TeamMember>
-          <MemberName left="136px" top="1305px">
-            Vandana&nbsp;Kumari
-          </MemberName>
-          <TechName left="136px" top="1354px">
-            QA&nbsp;Engineer
-          </TechName>
-          <TeamMember left="562px" top="939px" src={Vijay}></TeamMember>
-          <MemberName left="562px" top="1305px">
-            Vijay&nbsp;Pratap
-          </MemberName>
-          <TechName left="562px" top="1354px">
-            Software&nbsp;Engineer
-          </TechName>
-          <TeamMember left="988px" top="939px" src={Sushma}></TeamMember>
-          <MemberName left="988px" top="1305px">
-            Sushma&nbsp;Boddu
-          </MemberName>
-          <TechName left="988px" top="1354px">
-            Software&nbsp;Engineer
-          </TechName>
-          <TeamMember left="1414px" top="939px" src={Shiva}></TeamMember>
-          <MemberName left="1414px" top="1305px">
-            ShivaSai&nbsp;Dikonda
-          </MemberName>
-          <TechName left="1414px" top="1354px">
-            Software&nbsp;Engineer
-          </TechName>
-          <TeamMember left="136px" top="1459px" src={Ravalika}></TeamMember>
-          <MemberName left="136px" top="1825px">
-            Ravalika&nbsp;Kesari
-          </MemberName>
-          <TechName left="136px" top="1874px">
-            Software&nbsp;Engineer
-          </TechName>
-          <TeamMember left="562px" top="1459px" src={Vivek} alt={"Vivek's pic"} ></TeamMember>
-          <MemberName left="562px" top="1825px">
-            Vivek&nbsp;Tej
-          </MemberName>
-          <TechName left="562px" top="1874px">
-            Software&nbsp;Intern
-          </TechName>
-          <TeamMember left="988px" top="1459px" src={Preethi}></TeamMember>
-          <MemberName left="988px" top="1825px">
-            Preethi&nbsp;Bandari
-          </MemberName>
-          <TechName left="988px" top="1874px">
-          Software&nbsp;Intern
-          </TechName>
+
+          <MemberContainer>
+
+          <TeamBox>
+          <TeamMember src={Jay}></TeamMember>
+          <MemberName>Jayasagar&nbsp;Jagirapu</MemberName>
+          <TechName>Founder</TechName>
+          </TeamBox>
+ 
+          <TeamBox>
+          <TeamMember src={Prasad}></TeamMember>
+          <MemberName>Prasad&nbsp;Jagirapu</MemberName>
+          <TechName>Administration&nbsp;Head</TechName>
+          </TeamBox>
+
+          <TeamBox>
+          <TeamMember src={Raju}></TeamMember>
+          <MemberName>Raju&nbsp;Sidda</MemberName>
+          <TechName>Senior&nbsp;Software&nbsp;Engineer</TechName>
+          </TeamBox>
+ 
+          <TeamBox>
+          <TeamMember src={Chetan}></TeamMember>
+          <MemberName>Cheatn&nbsp;Kumar&nbsp;Bandari</MemberName>
+          <TechName>DevOps&nbsp;Engineer</TechName>
+          </TeamBox>
+
+          <TeamBox>
+          <TeamMember src={Vandana}></TeamMember>
+          <MemberName>Vandana&nbsp;Kumari</MemberName>
+          <TechName>QA&nbsp;Engineer</TechName>
+          </TeamBox>
+
+          <TeamBox>
+          <TeamMember src={Vijay}></TeamMember>
+          <MemberName>Vijay&nbsp;Pratap</MemberName>
+          <TechName>Software&nbsp;Engineer</TechName>
+          </TeamBox>
+
+          <TeamBox>
+          <TeamMember src={Sushma}></TeamMember>
+          <MemberName> Sushma&nbsp;Boddu</MemberName>
+          <TechName> Software&nbsp;Engineer</TechName>
+          </TeamBox>
+
+          <TeamBox>
+          <TeamMember src={Shiva}></TeamMember>
+          <MemberName>ShivaSai&nbsp;Dikond</MemberName>
+          <TechName> Software&nbsp;Engineer</TechName>
+          </TeamBox>
+
+          <TeamBox>
+          <TeamMember src={Ravalika}></TeamMember>
+          <MemberName>Ravalika&nbsp;Kesari</MemberName>
+          <TechName> Software&nbsp;Engineer</TechName>
+          </TeamBox>
+          
+          <TeamBox>
+          <TeamMember src={Vivek} ></TeamMember>
+          <MemberName>Vivek&nbsp;Tej</MemberName>
+          <TechName> Software&nbsp;Intern</TechName>
+          </TeamBox>
+
+          <TeamBox>
+          <TeamMember src={Preethi}></TeamMember>
+          <MemberName>Preethi&nbsp;Bandari</MemberName>
+          <TechName>Software&nbsp;Intern</TechName>
+          </TeamBox>
+
+          </MemberContainer>
         </TeamContainer>
         
 
         <BlogContainer>
           <BlogMainTitle>Blog</BlogMainTitle>
-          <SubBlog left="0px">
+          <Container>
+          
+          <SubBlog>
             <Group>
               <ImageLogo src={imagepath}></ImageLogo>
             </Group>
-            <BlogTitle>De-Risk your Products with UX Design Experts </BlogTitle>
-            <Time>19 Aug 2020</Time>
-            <BlogName>Jaya Sagar</BlogName>
+            <BlogTitle>De-&nbsp;Risk&nbsp;your&nbsp;Products&nbsp;with&nbsp;UX&nbsp;Design&nbsp;Experts</BlogTitle>
+            <Time>19&nbsp;Aug&nbsp;2020</Time>
+            <BlogName>Jaya&nbsp;Sagar</BlogName>
             <Department>Technical&nbsp;Department</Department>
           </SubBlog>
-          <SubBlog left="850px">
+          <SubBlog>
             <Group>
               <ImageLogo src={imagepath}></ImageLogo>
             </Group>
-            <BlogTitle>De-Risk your Products with UX Design Experts </BlogTitle>
-            <Time>19 Aug 2020</Time>
-            <BlogName>Jaya Sagar</BlogName>
+            <BlogTitle>De-&nbsp;Risk&nbsp;your&nbsp;Products&nbsp;with&nbsp;UX&nbsp;Design&nbsp;Experts</BlogTitle>
+            <Time>19&nbsp;Aug&nbsp;2020</Time>
+            <BlogName>Jaya&nbsp;Sagar</BlogName>
             <Department>Technical&nbsp;Department</Department>
           </SubBlog>
+          </Container>
         </BlogContainer>
       </Layout>
     );

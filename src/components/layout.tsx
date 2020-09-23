@@ -10,16 +10,20 @@ interface Props {
 
 const PageStyle = styled.div`
   position: relative;
-  top: 0;
-  left: 0;
-  width: 1920px;
+  width:100%;
+  max-width: 1920px;
   height: 7091px;
-  margin: 0 auto;
-  max-width:100%;
-
-  overflow:hidden;
+  
 
   background: #ffffff;
+
+  @media(max-width: 360px){
+    position: relative;
+    height: 6598px;
+    
+    background: #FFFFFF;
+
+  
 `;
 
 const Layout = ({ children }: Props) => {

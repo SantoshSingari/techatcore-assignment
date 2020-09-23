@@ -7,27 +7,43 @@ const LogoPath = require("../images/logo_tech.svg") as string;
 
 const TopNav = styled.header`
   position: absolute;
-  width: 1640px;
+  width:80%;  
+  max-width: 1640px;
   height: 50px;
-  left: 138px;
+  left:138px;
   top: 82px;
   z-index: 1;
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width:250.31px){
+    position:absloute;
+    display:flex;
+    align-item:center;
+    top: 37px;
+  }
 `;
 const LogoLink = styled(Link)`
   margin-right: auto;
 `;
 
 const LogoTech = styled.img`
-  // position: absolute;
+  position: absolute;
   width: 250.31px;
   height: 44px;
-  // left: 138px;
-  // top: 85px;
+ 
+  @media (width:250.31){
+    position: absolute;
+    height: 44px;
+    left: 32px;
+    top: 37px;
 `;
 
-const MenuContainer = styled.nav``;
+const MenuContainer = styled.nav`
+@media (max-width:768px){
+  display:none;
+}
+`;
 
 const MenuItem = styled(Link)`
   &.active {
