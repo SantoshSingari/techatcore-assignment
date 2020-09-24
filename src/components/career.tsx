@@ -18,6 +18,7 @@ const Ravalika = require("../images/team/RavalikaKesari.jpeg") as string;
 const Preethi = require("../images/team/Preethi.jpg") as string;
 const Vivek = require("../images/team/Vivek.jpg") as string;
 
+
 const BgShade = styled.div`
   position: absolute;
   max-width: 1920px;
@@ -26,6 +27,8 @@ const BgShade = styled.div`
   left: 0px;
   top: 0px;
   display:flex;
+  flex-direction:row;
+  justify-content:center;
   align-item:center;
 
   background: #000000;
@@ -35,42 +38,51 @@ const BgShade = styled.div`
 
 const HeadTitle = styled(Title)`
   position: absolute;
-  width: 202px;
+  max-width: 202px;
+  width:100%;
   height: 65px;
-  left: 40%;
   top: 247px;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+   align-item:center;
+  
 
   color: #ffffff;
 `;
 
 const WhyContainer = styled.div`
   position:absolute;
-  max-width: 817px;
-  width:60%;
+  max-width:1920px;
+  width:100%;
   height: 534px;
-  left:25%;
   display:flex;
+  flex-direction:column;
+  align-items:center;
   top: 597px;
-  text-align:center;
+  justify-content:center;
 `;
 
 const WhyTitle = styled(Title)`
   position: absolute;
   max-width: 817px;
-  width:60%;
+  width:100%;
   height: 534px;
-  left: 172px;
+  display:flex;
+  justify-content:center;
   top: 0px;
+  
 
   color: #000000;
 `;
 
 const Desc = styled.p`
   position: absolute;
-  width: 817px;
+  max-width: 817px;
   height: 333px;
-  left: 0px;
   top: 201px;
+  display:flex;
+  justify-content:center;
 
   font-family: Nunito;
   font-style: normal;
@@ -93,6 +105,7 @@ const ValuesContainer = styled.div`
   top: 1286px;
   display: flex;
   flex-direction:column;
+  background: #E5E5E5;
   padding-right:143px;
   padding-left:143px;
 `;
@@ -176,9 +189,10 @@ width:100%;
 height: 412px;
 top: 2415px;
 display:flex;
-padding:50px;
 flex-direction:column;
+justify-content:center;
 align-items:center;
+
 
 `;
 const TechTitle = styled.div`
@@ -198,31 +212,29 @@ const TechTitle = styled.div`
 
 const TickContainer = styled.div`
 position:absolute;
-max-width:1920px;
-width:100%;
+max-width:1720px;
+width:84%;
 height:262px;
-top:150px;
+top:350px;
 display:flex;
-flex-wrap:wrap;
-margin-right:50px;
+flex-flow:row wrap;
+
 `;
 
 const TechBox = styled.div`
 postion:absolute;
-max-width:400px;
+max-width:350px;
 width:100%;
-margin:20px;
 height:60px;
 display:flex;
 flex-direction:row;
-align-items:center;
 `;
 
 const TechTick = styled.img`
   position: absolute;
   width: 40px;
   height: 40px;
-  // display:flex;
+  display:flex;
   // padding:10px;
 `;
 
@@ -236,7 +248,7 @@ const TechDesc = styled.div`
   font-family: Nunito;
   font-style: normal;
   font-weight: 800;
-  font-size: 34px;
+  font-size: 25px;
   line-height: 50px;
   color: #363636;
 `;
@@ -251,7 +263,7 @@ const TeamContainer = styled.div`
   background: #e5e5e5;
   display:flex;
   flex-direction:column;
-  align-items-center;
+  justify-content:center;
 `;
 
 
@@ -262,7 +274,7 @@ const TeamTitle = styled.div`
   left:40%;
   justify-content:center;
   height: 63.56px;
-  top: 183.02px;
+  top: 50px;
 
   font-family: Nunito;
   font-style: normal;
@@ -275,24 +287,22 @@ const TeamTitle = styled.div`
 `;
 const MemberContainer = styled.div`
 position:absolute;
-max-width:1920x;
+max-width:1720x;
 width:100%;
 height:1664px;
 display:flex;
-flex-wrap:wrap;
+flex-flow:row wrap;
 top:250px;
-
+justify-content:center;
 `;
 
 const TeamBox = styled.div`
 position: relative;
-max-width: 368px;
-width:100%;
+width: 280px;
 height: 453px;
 display:flex;
-margin-left:80px;
+margin:12px;
 flex-direction:column;
-align-items:left;
 `;
 
 const TeamMember = styled.img`
@@ -313,7 +323,7 @@ const MemberName = styled.div`
   font-family: Nunito;
   font-style: normal;
   font-weight: 800;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 50px;
   color: #363636;
 `;
@@ -329,135 +339,146 @@ const TechName = styled.div`
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 32px;
   color: #000000;
 `;
 
 const BlogContainer = styled.div`
-  position: absolute;
- max-width: 1641px;
- width:100%;
-  height: 979px;
-  display:flex;
-  flex-direction:column;
-  align-items-center;
-  top: 5319px;
-  border:5px solid red;
+position: absolute;
+max-width: 1641px;
+width:100%;
+height: 979px;
+top: 5319px;
+display:flex;
+flex-direction:column;
+align-items:center;
+
 `;
 
 const BlogTitle = styled.div`
-  position: absolute;
-  max-width: 640px;
-  height: 94px;
-  top:0px;
+position:relative;
+max-width: 128px;
+height: 64px;
+top:0px;
+justify-content:center;
+
+font-family: Nunito;
+font-style: normal;
+font-weight: 800;
+font-size: 54px;
+line-height: 50px;
 
 
+color: #000000;
 
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 34px;
-  line-height: 46px;
-  color: #363636;
 `;
-const Container = styled.div`
-position:absolute;
+
+const GroupContainer = styled.div`
+postion:absolute;
 max-width:1641px;
-width:100%;
+width:80%;
 height:718px;
-margin-top:261px;
+margin-top:100px;
 display:flex;
-flex-wrap:wrap;
+flex-direction:row;
+justify-content:center;
 `;
-const SubBlog = styled.div`
-  position:absolute;
-  max-width: 791px;
-  height: 718px;
-  display:flex;
-margin-top:5px;
-margin-right:2px;
-margin-left:5px;
+
+const RowBlog = styled.div`
+position:relative;
+max-width:900px;
+width:100%;
+height: 718px;
+display:flex;
 flex-direction:column;
-align-items:left;
+margin:4%;
+padding:50px;
+background: #FFFFFF;
+border: 1px solid #CFCFCF;
+box-sizing: border-box;
 `;
+
 
 const Group = styled.div`
-  position: absolute;
-  max-width: 680px;
-  height: 285px;
-  left: 55px;
-  top: 57px;
-
-  background: #1e3658;
-  border: 1px solid #1e3658;
-  box-sizing: border-box;
+position:relative;
+width: 480px;
+height: 285px;
+display:flex;
+margin:1%;
+justify-content:center;
+background-color:#1E3658;
 `;
 
-const ImageLogo = styled.img`
-  position: absolute;
-  max-width: 506px;
-  height: 275px;
-  left: 76px;
-  top: 5px;
+const BlogImg = styled.img`
+position: absolute;
+width: 350px;
+height: 275px;
+display:flex;
+`;
+const GroupTitle = styled.div`
+position: absolute;
+width: 506px;
+height: 94px;
+top:377px;
+display:flex;
+margin:1%;
+
+font-family: Nunito;
+font-style: normal;
+font-weight: 800;
+font-size: 26px;
+line-height: 46px;
+color: #363636;
+ `;
+const Date = styled.div`
+position: absolute;
+width: 152px;
+height: 38px;
+top:508px;
+display:flex;
+margin:1%;
+
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 32px;
+color: #000000;
+
 `;
 
+const Name = styled.div`
+position: absolute;
+width: 253px;
+height: 63px;
+top: 570px;
+display:flex;
+margin:1%;
 
+font-family: Nunito;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 32px;
+color: #000000;
 
-const Time = styled.div`
-  position: absolute;
-  max-width: 152px;
-  height: 38px;
-  left: 55px;
-  top: 508px;
-
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 32px;
-  color: #000000;
 `;
 
-const BlogMainTitle = styled(Title)`
-  position: absolute;
-  max-width: 128px;
-  width:100%;
-  height: 64px;
-  left: 756px;
-  top: 377px;
+const Dept = styled.div`
+position: absolute;
+width: 253px;
+height: 63px;
+top: 610px;
+display:flex;
+margin:1%;
 
-  color: #000000;
-`;
-
-const BlogName = styled.div`
-  position: absolute;
-  max-width: 253px;
-  height: 63px;
-  left: 55px;
-  top: 579px;
-
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
-  color: #000000;
-`;
-
-const Department = styled.div`
-  position: absolute;
-  max-width: 152px;
-  height: 38px;
-  left: 55px;
-  top: 620px;
-
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 32px;
-  color: #000000;
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 32px;
+color: #000000;
 `;
 
 export default class career extends Component {
@@ -593,7 +614,7 @@ export default class career extends Component {
  
           <TeamBox>
           <TeamMember src={Chetan}></TeamMember>
-          <MemberName>Cheatn&nbsp;Kumar&nbsp;Bandari</MemberName>
+          <MemberName>Chetan&nbsp;Kumar&nbsp;Bandari</MemberName>
           <TechName>DevOps&nbsp;Engineer</TechName>
           </TeamBox>
 
@@ -642,31 +663,31 @@ export default class career extends Component {
           </MemberContainer>
         </TeamContainer>
         
-
         <BlogContainer>
-          <BlogMainTitle>Blog</BlogMainTitle>
-          <Container>
-          
-          <SubBlog>
+          <BlogTitle>Blog</BlogTitle>
+          <GroupContainer>
+          <RowBlog>
             <Group>
-              <ImageLogo src={imagepath}></ImageLogo>
+              <BlogImg src={imagepath}></BlogImg>
             </Group>
-            <BlogTitle>De-&nbsp;Risk&nbsp;your&nbsp;Products&nbsp;with&nbsp;UX&nbsp;Design&nbsp;Experts</BlogTitle>
-            <Time>19&nbsp;Aug&nbsp;2020</Time>
-            <BlogName>Jaya&nbsp;Sagar</BlogName>
-            <Department>Technical&nbsp;Department</Department>
-          </SubBlog>
-          <SubBlog>
-            <Group>
-              <ImageLogo src={imagepath}></ImageLogo>
-            </Group>
-            <BlogTitle>De-&nbsp;Risk&nbsp;your&nbsp;Products&nbsp;with&nbsp;UX&nbsp;Design&nbsp;Experts</BlogTitle>
-            <Time>19&nbsp;Aug&nbsp;2020</Time>
-            <BlogName>Jaya&nbsp;Sagar</BlogName>
-            <Department>Technical&nbsp;Department</Department>
-          </SubBlog>
-          </Container>
+            <GroupTitle>De-&nbsp;Risk&nbsp;your&nbsp;Products&nbsp;with&nbsp;UX&nbsp;Design Experts </GroupTitle>
+            <Date>19 Aug 2020</Date>
+            <Name>Jaya&nbsp;Sagar</Name>
+            <Dept>Technical&nbsp;Department</Dept>
+          </RowBlog>
+          <RowBlog>
+          <Group>
+          <BlogImg src={imagepath}></BlogImg>
+          </Group>
+          <GroupTitle>De-&nbsp;Risk&nbsp;your&nbsp;Products&nbsp;with&nbsp;UX&nbsp;Design Experts </GroupTitle>
+          <Date>19 Aug 2020</Date>
+          <Name>Jaya&nbsp;Sagar</Name>
+          <Dept>Technical&nbsp;Department</Dept>
+          </RowBlog>
+          </GroupContainer>
         </BlogContainer>
+
+        
       </Layout>
     );
   }

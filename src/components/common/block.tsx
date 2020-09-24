@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export default styled.div`
   position:relative;
-  width:536px;
+  width:600px;
   height: 640px;
   background-color: #e5e5e5;
   display:flex;

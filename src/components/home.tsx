@@ -26,28 +26,23 @@ const Banner = styled.div`
   &.bgImage {
     position: absolute;
     width:100%;
-    max-width:1920px;
+    max-width:1720px;
     height:1123px;
-    background: url(${Team}) top center no-repeat;
+    
+    display:flex;
+    justify-content:center;
+    background: url(${Team}) no-repeat;
+    background-size:cover;
     @media (max-width:1094px){
        height: 640px;
      border-radius: 0px;
     }
   }
-  // &.bgShade {
-  //   position: absolute;
-  //   width:100%;
-  //   max-width: 1920px;
-  //   width: 1920px;
-  //   height: 1123px;
-  //   left: 0px;
-  //   top: 1px;
-    
-  }
+  
   &.bgShade {
     position: absolute;
     width:100%;
-    max-width: 1920px;
+    max-width: 1620px;
     height: 1125px;
     left: 0px;
     top: 0px;
@@ -76,19 +71,11 @@ const BannerContent = styled.div`
 
 const ContentOne = styled(Title)`
   position: absolute;
-  width: 880px;
+  width: 800px;
   height: 123px;
   top: 0;
   color: #ffffff;
-      @media (width:313px){
-          position: absolute;
-          max-width: 313px;
-          height: 172px;
-          left: 32px;
-          top: 137px;
-          display:flex;
-          text-align: justify;
-          margin:0 auto;
+  display:flex;
 `;
 
 const ContenTwo = styled.div`
@@ -100,29 +87,17 @@ const ContenTwo = styled.div`
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 46px;
   color: #ffffff;
-  @media(width:310px){
-    height: 103px;
-    display:flex;
-    align-items:center;
-    top: 315px;
-    border-radius: nullpx;
-  }
+  
 `;
 const ContentThree = styled(Button)`
   position: absolute;
   top: 443px;
-  background: #0078d7;
+  background: #0078D7;
   border-radius: 100px;
-  @media (max-width:291px){
-    height: 60px;
-    display:flex;
-    align-items:center;
-    top: 456px;
-    border-radius: 100px;
-    }
+  z-index:20;
 `;
 const Container = styled.div`
   position: absolute;
@@ -168,6 +143,8 @@ const WhyContainer = styled.div`
   top: 1253px;
   display:flex;
   flex-direction:column;
+  justify-content:center;
+  align-items:center;
   
 `;
 
@@ -176,17 +153,18 @@ const WhyTitle = styled(Title)`
   max-width: 473px;
   height: 50px;
   top: 0px;
-  left:35%;
   color: #000000;
+  display:flex;
+  justify-content:center;
 `;
 const BlockContainer = styled.div`
 position:absolute;
-width:100%;
+width:90%;
 max-width:1640px;
 top:178px;
 display:flex;
 flex-direction:row;
-padding:10px;
+justify-content:center;
 `;
 const BlockLogo = styled.img`
   position: absolute;
@@ -223,7 +201,7 @@ const BlockDescription = styled.p`
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 32px;
   /* or 160% */
   color: #000000;
@@ -235,20 +213,21 @@ const ServicesContainer = styled.div`
   width:100%;
   max-width: 1920px;
   height: 2316px;
-  left: 0px;
   top: 2267px;
-  display:flex:
-  align-items:cneter;
-  flex-direction:column;
   background-color: #e5e5e5;
-
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 `;
 
 const ContainerTitle = styled(Title)`
   position: absolute;
   max-width: 315px;
   height: 2316px;
-  left: 40%;
+  display:flex;
+  flex-direction:row;
+  text-align:center;
   top: 144px;
   color: #000000;
 `;
@@ -261,7 +240,7 @@ const SubContainer = styled.div`
   position: absolute;
   width: 941px;
   height: 214px;
-  left:20%;
+  display:flex;
   top: ${(props: SubProps) => props.top};
 `;
 
@@ -326,21 +305,23 @@ const BrandContainer = styled.div`
   height: 521px;
   top: 4771px;
   display:flex;
+  flex-direction:column;
   align-items:center;
+  justify-content:center;
 `;
 
 const BrandTitle = styled(Title)`
   position: absolute;
   top: 0;
-  left: 30%;
+  display:flex;
 `;
 const BrandImg = styled.img`
   position: absolute;
-  width:100%;
+  width:90%;
   max-width: 1563px;
   height: 308px;
-  left: 0px;
   top: 213px;
+  display:flex;
 `;
 
 const SlideContainer = styled.div`
@@ -366,7 +347,8 @@ class Home extends Component {
           <Banner className="bgShade">
             <BannerContent id="bContent">
               <ContentOne>
-                Over decade experience with poly skills engineering specialists
+                Over decade experience with poly   
+                skills engineering specialists
               </ContentOne>
               <ContenTwo>
                 Working with companies and individuals to solve hard problems
@@ -392,8 +374,8 @@ class Home extends Component {
             <BlockLogo src={Logo1} />
             <BlockTitle>Startup&nbsp;mindset</BlockTitle>
             <BlockDescription>
-                  We enjoy bringing our years of experience into the startup world,&nbsp;and we worked with many startup teams, so we understand the&nbsp;
-              startup realities, and we know what to expect and how to look into&nbsp;their processes, technology, and product quite well.
+                  We enjoy bringing our years of experience into  the startup world,   and we worked with many 
+                  startup teams, so we understand the startup realities, and we know what to expect and how to look into their processes, technology, and product quite well.
             </BlockDescription>
             <Rectangle></Rectangle>
           </Block>
@@ -403,9 +385,8 @@ class Home extends Component {
             <BlockLogo src={Logo2} />
             <BlockTitle>Our&nbsp;strategy</BlockTitle>
             <BlockDescription>
-                  There is no single solution, strategy, or approach for any&nbsp;corporates, startup, or individuals. Every situation is unique,
-              and one should approach to solve the problem based on the overall&nbsp;context, situation, and resources at hand. Fail-fast approach,
-              this is where pragmatism comes, and we come into play to help&nbsp;start-ups and corporate to bring this mindset.
+                  There&nbsp;single&nbsp;solution,&nbsp;strategy,&nbsp;or&nbsp;approach for&nbsp;any&nbsp;corporates,&nbsp;startup,&nbsp;or&nbsp;individuals.&nbsp;Every situation is unique,
+              and one should approach&nbsp;to solve the problem based on the overall&nbsp;context, situation, and resources at&nbsp;hand.&nbsp;Fail-fast approach,&nbsp;this is where&nbsp;pragmatism comes,&nbsp;and we come into play to help&nbsp;start-ups and corporate to bring this mindset.
             </BlockDescription>
             <Rectangle></Rectangle>
           </Block>
