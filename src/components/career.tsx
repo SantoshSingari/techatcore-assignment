@@ -191,59 +191,38 @@ const TechDesc = styled.div`
 `;
 
 const TeamContainer = styled.div`
-  position: absolute;
-  max-width: 1920px;
-  width:100%;
-  height: 2087px;
-  left: 0px;
-  top: 3046px;
   background: #e5e5e5;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
 `;
 
 
 const TeamTitle = styled.div`
-  position: absolute;
-  max-width: 315px;
-  width:100%;
-  left:40%;
-  justify-content:center;
-  height: 63.56px;
-  top: 50px;
-
   font-family: Nunito;
   font-style: normal;
   font-weight: 800;
   font-size: 54px;
-  line-height: 50px;
-  /* or 93% */
-
+  line-height: 1.5;
+  
   color: #000000;
+  text-align: center;
+  padding: 50px 0;
+  
+  @media (max-width: 600px){
+    font-size: 30px;
+  }
 `;
 const MemberContainer = styled.div`
-position:absolute;
-max-width:1720x;
-width:100%;
-height:1664px;
-display:flex;
-flex-flow:row wrap;
-top:250px;
-justify-content:center;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+  padding: 0 20px;
 `;
 
 const TeamBox = styled.div`
-position: relative;
-width: 280px;
-height: 453px;
-display:flex;
-margin:12px;
-flex-direction:column;
+  width: 280px;
+  margin:12px;
 `;
 
 const TeamMember = styled.img`
-  position: absolute;
   max-width: 368px;
   width:100%;
   height: 342px;
@@ -251,33 +230,21 @@ const TeamMember = styled.img`
 `;
 
 const MemberName = styled.div`
-  position: absolute;
-  max-width: 226px;
-  width:100%;
-  height: 72.46px;
-  top:366px;
-
   font-family: Nunito;
   font-style: normal;
   font-weight: 800;
   font-size: 28px;
-  line-height: 50px;
+  line-height: 1.5;
   color: #363636;
 `;
 
 
 const TechName = styled.div`
-  position: absolute;
-  max-width: 152px;
-  width:100%;
-  height: 38px;
-  top:415px;
-
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 32px;
+  line-height: 1.5;
   color: #000000;
 `;
 
