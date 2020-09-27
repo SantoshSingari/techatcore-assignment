@@ -38,6 +38,7 @@ const WhyContainer = styled.div`
   flex-direction:column;
   align-items:center;
   justify-content:center;
+  padding-bottom: 70px;
 `;
 
 const WhyTitle = styled(Title)`
@@ -69,78 +70,53 @@ const Desc = styled.p`
 const Break = styled.br``;
 
 const ValuesContainer = styled.div`
-  position:absolute;
-  max-width: 1920px;
-  width:100%;
-  height: 945px;
-  left: 0px;
-  top: 1286px;
   display: flex;
   flex-direction:column;
   background: #E5E5E5;
-  padding-right:143px;
-  padding-left:143px;
+  padding: 0 20px 70px
 `;
 
 const ValueTitle = styled(Title)`
-  position: absolute;
-  max-width: 276px;
-  height: 64px;
-  left: 40%;
-  top: 183px;
   color: #000000;
+  text-align: center;
+  padding: 50px 0;
+  
+  @media (max-width: 600px){
+    font-size: 30px;
+  }
 `;
 
-const ValueIncontainer = styled.div`
-postion:absolute;
-max-width:1920px;
-width:100%;
-height:505px;
-margin-top:400px;
-display: flex;
-flex-direction:row;
-justify-content:space-around;
-`;
-const ValueBlock = styled.div`
-postion:relative;
-max-width:600px;
-width:100%;
-height:505px;
-top:0px;
-display: flex;
-margin-right:50px;
-align-items:left;
-flex-direction:column;
-`;
 const ValueImg = styled.img`
-  // position: absolute;
-  max-width: 60px;
-  width:100%;
+  width:60px;
   height: 60px;
-  margin-top:16px;
 `;
 
+const ValueContentContainer = styled.div`
+  display: flex;
+  @media (max-width: 760px){
+    flex-direction: column;
+  }
+`;
 
-const ValueOne = styled.div`
-  // position: absolute;
-  max-width: 226px;
-  width:100%;
-  height: 72.46px; 
-  margin-top:50px;
+const ValueContentBlock = styled.div`
+  flex: 1;
+  margin: 0 10px;
+  
+  @media (max-width: 760px){
+    margin: 0 0 40px;
+  }
+`;
 
+const ValueContentTitle = styled.div`
   font-family: Nunito;
   font-style: normal;
   font-weight: 800;
-  font-size: 34px;
-  line-height: 50px;
+  font-size: 25px;
+  line-height: 1.5;
   color: #363636;
 `;
 
 const ValueDesc = styled.p`
-  // position: absolute;
-  max-width: 437px;
-  width:100%;
-  height: 81.35px;
   margin-top: 50px;
 
   font-family: Nunito;
@@ -148,10 +124,11 @@ const ValueDesc = styled.p`
   font-weight: normal;
   font-size: 20px;
   line-height: 32px;
-
-  /* or 160% */
-
   color: #000000;
+  
+  @media (max-width: 760px){
+    font-size: 18px;
+  }
 `;
 
 const TechContainer = styled.div`
@@ -462,7 +439,7 @@ export default class career extends Component {
           <HeadTitle>Careers</HeadTitle>
         </BgShade>
         <WhyContainer>
-          <WhyTitle id="title">Why&nbsp;tech.at.core&nbsp;?</WhyTitle>
+          <WhyTitle id="title">Why tech.at.core ?</WhyTitle>
           <Desc>
             We are passionate Software specialist across various disciplines. We
             value quality of work and challenge continuous learning throughout
@@ -485,78 +462,66 @@ export default class career extends Component {
         </WhyContainer>
         <ValuesContainer>
           <ValueTitle>Our values</ValueTitle>
-          
-          <ValueIncontainer>
-            
-            <ValueBlock>
-          <ValueImg src={valuepath}></ValueImg>
-          <ValueOne>
-            Being&nbsp;Human
-          </ValueOne>
-          <ValueDesc>
-            We are human-first approach company and everything comes next.
-          </ValueDesc>
-          </ValueBlock>
-         
-          <ValueBlock>
-          <ValueImg src={valuepath}></ValueImg>
-          <ValueOne>
-            Unblock&nbsp;people
-          </ValueOne>
-          <ValueDesc>
-            Helping the team or people around is always comes as a top priority
-          </ValueDesc>
-          </ValueBlock>
-          
-          <ValueBlock>
-          <ValueImg src={valuepath}></ValueImg>
-          <ValueOne>
-            Lead&nbsp;by&nbsp;example&nbsp;mindset
-          </ValueOne>
-          <ValueDesc>
-            Inspire everyone and set the trend and show how to.
-          </ValueDesc>
-          </ValueBlock>
-         
-        </ValueIncontainer>
-        
+          <ValueContentContainer>
+            <ValueContentBlock>
+              <ValueImg src={valuepath}></ValueImg>
+              <ValueContentTitle>Being Human</ValueContentTitle>
+              <ValueDesc>
+                We are human-first approach company and everything comes next.
+              </ValueDesc>
+            </ValueContentBlock>
+            <ValueContentBlock>
+              <ValueImg src={valuepath}></ValueImg>
+              <ValueContentTitle>Unblock people</ValueContentTitle>
+              <ValueDesc>
+                Helping the team or people around is always comes as a top priority
+              </ValueDesc>
+            </ValueContentBlock>
+            <ValueContentBlock>
+              <ValueImg src={valuepath}></ValueImg>
+              <ValueContentTitle>Lead by example mindset</ValueContentTitle>
+              <ValueDesc>
+                Inspire everyone and set the trend and show how to.
+              </ValueDesc>
+            </ValueContentBlock>
+          </ValueContentContainer>
         </ValuesContainer>
         <TechContainer>
-          <TechTitle>Life&nbsp;at&nbsp;tech.at.core</TechTitle>
+          <TechTitle>Life at tech.at.core</TechTitle>
           
           <TickContainer>
           <TechBox>
           <TechTick src={tickpath}></TechTick>
           <TechDesc>
-            Being&nbsp;Human
+            Being Human
           </TechDesc>
           </TechBox>
 
           <TechBox>
           <TechTick src={tickpath}></TechTick>
           <TechDesc>
-            Unblock&nbsp;people
+            Unblock people
           </TechDesc>
           </TechBox>
 
           <TechBox>
           <TechTick src={tickpath}></TechTick>
           <TechDesc>
-            Lead&nbsp;by&nbsp;example&nbsp;mindset
+            Lead by example mindset
           </TechDesc>
           </TechBox>
 
           <TechBox>
           <TechTick src={tickpath}></TechTick>
           <TechDesc>
-            Flexible&nbsp;working&nbsp;hours
+            Flexible working hours
           </TechDesc>
           </TechBox>
 
           <TechBox>
           <TechTick src={tickpath}></TechTick>
           <TechDesc>
-            Flexible&nbsp;working&nbsp;machine
+            Flexible working machine
           </TechDesc>
           </TechBox>
           </TickContainer>
@@ -569,68 +534,68 @@ export default class career extends Component {
 
           <TeamBox>
           <TeamMember src={Jay}></TeamMember>
-          <MemberName>Jayasagar&nbsp;Jagirapu</MemberName>
+          <MemberName>Jayasagar Jagirapu</MemberName>
           <TechName>Founder</TechName>
           </TeamBox>
  
           <TeamBox>
           <TeamMember src={Prasad}></TeamMember>
-          <MemberName>Prasad&nbsp;Jagirapu</MemberName>
-          <TechName>Administration&nbsp;Head</TechName>
+          <MemberName>Prasad Jagirapu</MemberName>
+          <TechName>Administration Head</TechName>
           </TeamBox>
 
           <TeamBox>
           <TeamMember src={Raju}></TeamMember>
-          <MemberName>Raju&nbsp;Sidda</MemberName>
-          <TechName>Senior&nbsp;Software&nbsp;Engineer</TechName>
+          <MemberName>Raju Sidda</MemberName>
+          <TechName>Senior Software Engineer</TechName>
           </TeamBox>
  
           <TeamBox>
           <TeamMember src={Chetan}></TeamMember>
-          <MemberName>Chetan&nbsp;Kumar&nbsp;Bandari</MemberName>
-          <TechName>DevOps&nbsp;Engineer</TechName>
+          <MemberName>Chetan Kumar Bandari</MemberName>
+          <TechName>DevOps Engineer</TechName>
           </TeamBox>
 
           <TeamBox>
           <TeamMember src={Vandana}></TeamMember>
-          <MemberName>Vandana&nbsp;Kumari</MemberName>
-          <TechName>QA&nbsp;Engineer</TechName>
+          <MemberName>Vandana Kumari</MemberName>
+          <TechName>QA Engineer</TechName>
           </TeamBox>
 
           <TeamBox>
           <TeamMember src={Vijay}></TeamMember>
-          <MemberName>Vijay&nbsp;Pratap</MemberName>
-          <TechName>Software&nbsp;Engineer</TechName>
+          <MemberName>Vijay Pratap</MemberName>
+          <TechName>Software Engineer</TechName>
           </TeamBox>
 
           <TeamBox>
           <TeamMember src={Sushma}></TeamMember>
-          <MemberName> Sushma&nbsp;Boddu</MemberName>
-          <TechName> Software&nbsp;Engineer</TechName>
+          <MemberName> Sushma Boddu</MemberName>
+          <TechName> Software Engineer</TechName>
           </TeamBox>
 
           <TeamBox>
           <TeamMember src={Shiva}></TeamMember>
-          <MemberName>ShivaSai&nbsp;Dikond</MemberName>
-          <TechName> Software&nbsp;Engineer</TechName>
+          <MemberName>ShivaSai Dikond</MemberName>
+          <TechName> Software Engineer</TechName>
           </TeamBox>
 
           <TeamBox>
           <TeamMember src={Ravalika}></TeamMember>
-          <MemberName>Ravalika&nbsp;Kesari</MemberName>
-          <TechName> Software&nbsp;Engineer</TechName>
+          <MemberName>Ravalika Kesari</MemberName>
+          <TechName> Software Engineer</TechName>
           </TeamBox>
           
           <TeamBox>
           <TeamMember src={Vivek} ></TeamMember>
-          <MemberName>Vivek&nbsp;Tej</MemberName>
-          <TechName> Software&nbsp;Intern</TechName>
+          <MemberName>Vivek Tej</MemberName>
+          <TechName> Software Intern</TechName>
           </TeamBox>
 
           <TeamBox>
           <TeamMember src={Preethi}></TeamMember>
-          <MemberName>Preethi&nbsp;Bandari</MemberName>
-          <TechName>Software&nbsp;Intern</TechName>
+          <MemberName>Preethi Bandari</MemberName>
+          <TechName>Software Intern</TechName>
           </TeamBox>
 
           </MemberContainer>
@@ -643,19 +608,19 @@ export default class career extends Component {
             <Group>
               <BlogImg src={imagepath}></BlogImg>
             </Group>
-            <GroupTitle>De-&nbsp;Risk&nbsp;your&nbsp;Products&nbsp;with&nbsp;UX&nbsp;Design Experts </GroupTitle>
+            <GroupTitle>De- Risk your Products with UX Design Experts </GroupTitle>
             <Date>19 Aug 2020</Date>
-            <Name>Jaya&nbsp;Sagar</Name>
-            <Dept>Technical&nbsp;Department</Dept>
+            <Name>Jaya Sagar</Name>
+            <Dept>Technical Department</Dept>
           </RowBlog>
           <RowBlog>
           <Group>
           <BlogImg src={imagepath}></BlogImg>
           </Group>
-          <GroupTitle>De-&nbsp;Risk&nbsp;your&nbsp;Products&nbsp;with&nbsp;UX&nbsp;Design Experts </GroupTitle>
+          <GroupTitle>De- Risk your Products with UX Design Experts </GroupTitle>
           <Date>19 Aug 2020</Date>
-          <Name>Jaya&nbsp;Sagar</Name>
-          <Dept>Technical&nbsp;Department</Dept>
+          <Name>Jaya Sagar</Name>
+          <Dept>Technical Department</Dept>
           </RowBlog>
           </GroupContainer>
         </BlogContainer>
