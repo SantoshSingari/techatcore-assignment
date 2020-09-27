@@ -266,15 +266,17 @@ const BrandContainer = styled.div`
 const BrandTitle = styled(Title)`
   text-align: center;
   padding: 70px 0;
+  
+  @media (max-width: 700px){
+    font-size: 30px;
+    line-height: 1.5;
+  }
 `;
 const BrandImg = styled.img`
   width: 100%;
 `;
 
 const SlideContainer = styled.div`
-  max-width: 1920px;
-  width:100%;
-  height: 874px;
   background: #F3F3F3;
 `;
 
