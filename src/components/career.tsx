@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Layout from "./layout";
 import styled from "@emotion/styled";
 import Title from "./common/title";
+import Header from "./header";
 
 const valuepath = require("../images/value.svg") as string;
 const tickpath = require("../images/tick.svg") as string;
@@ -20,35 +21,16 @@ const Vivek = require("../images/team/Vivek.jpg") as string;
 
 
 const BgShade = styled.div`
-  position: absolute;
-  max-width: 1920px;
-  width:100%;
-  height: 429px;
-  left: 0px;
-  top: 0px;
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-item:center;
-
   background: #000000;
   border: 1px solid #000000;
   box-sizing: border-box;
+  padding: 70px 50px;
 `;
 
 const HeadTitle = styled(Title)`
-  position: absolute;
-  max-width: 202px;
-  width:100%;
-  height: 65px;
-  top: 247px;
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-   align-item:center;
-  
-
   color: #ffffff;
+  text-align: center;
+  padding-top: 50px;
 `;
 
 const WhyContainer = styled.div`
@@ -486,6 +468,7 @@ export default class career extends Component {
     return (
       <Layout>
         <BgShade>
+          <Header index={0}></Header>
           <HeadTitle>Careers</HeadTitle>
         </BgShade>
         <WhyContainer>
