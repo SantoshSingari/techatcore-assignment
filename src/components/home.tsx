@@ -294,7 +294,7 @@ class Home extends Component {
               <Header index={0}></Header>
               <ContentOne>
                 Over decade experience with poly   
-                skills engineering specialists
+                skills engineering specialists.
               </ContentOne>
               <ContenTwo>
                 Working with companies and individuals to solve hard problems
@@ -328,7 +328,7 @@ class Home extends Component {
               <BlockLogo src={Logo2} />
               <BlockTitle>Our strategy</BlockTitle>
               <BlockDescription>
-                    There single solution, strategy, or approach for any corporates, startup, or individuals. Every situation is unique,
+                    There is no single solution, strategy, or approach for any corporates, startup, or individuals. Every situation is unique,
                 and one should approach to solve the problem based on the overall context, situation, and resources at hand. Fail-fast approach, this is where pragmatism comes, and we come into play to help start-ups and corporate to bring this mindset.
               </BlockDescription>
             </Block>
