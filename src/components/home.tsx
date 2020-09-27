@@ -7,7 +7,6 @@ import Layout from "./layout";
 import Button from "./common/button";
 import Title from "./common/title";
 import Block from "./common/block";
-import Rectangle from "./common/rectangle";
 import Header from "./header";
 
 const Team = require("../images/banner_background_image.svg") as string;
@@ -101,10 +100,8 @@ const Container = styled.div`
 `;
 
 const ScrollDown = styled.div`
-   width: 106px;
-   height: 50px;
-   left: 0px;
-   top: 0px;
+  width: 106px;
+  height: 50px;
   font-family: Nunito;
   font-style: normal;
   font-weight: bold;
@@ -122,74 +119,61 @@ const Polygon = styled.img`
 `;
 
 const WhyContainer = styled.div`
-  width:100%;
-  max-width: 1920px;
-  height: 818px;
-  top: 1253px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  
+  width: 80%;
+  margin: 0 auto;
+  @media (max-width: 1200px){
+    width: 100%;
+    padding: 0 30px;
+  }
 `;
 
 const WhyTitle = styled(Title)`
-  max-width: 473px;
-  height: 50px;
-  top: 0px;
   color: #000000;
-  display:flex;
-  justify-content:center;
+  text-align: center;
+  padding: 50px 0;
+  
+  @media (max-width: 800px){
+    font-size: 30px;
+    line-height: 1;
+  }
 `;
 const BlockContainer = styled.div`
-width:90%;
-max-width:1640px;
-top:178px;
-display:flex;
-flex-direction:row;
-justify-content:center;
+  display:flex;
+  
+  @media (max-width: 800px){
+    flex-direction: column;
+  }
 `;
 const BlockLogo = styled.img`
-  position: absolute;
-  max-width: 100px;
-  height: 100px;
-  left: 49px;
-  top: 53px;
+  width: 100px;
+  margin: 53px 0 0 49px;
 `;
 
 const BlockTitle = styled.h2`
-  position: absolute;
-  max-width: 305px;
-  height: 50px;
   margin-left:5px;
-  display:flex;
-  margin:15px;
-  top: 200px;
+  margin: 50px 0 0 15px;
   font-family: Nunito;
   font-style: normal;
   font-weight: 800;
   font-size: 34px;
   line-height: 50px;
   color: #363636;
+  
+  @media (max-width: 1200px){
+    font-size: 25px;
+  }
 `;
 
 const BlockDescription = styled.p`
-  position: absolute;
-  display:flex;
   margin:15px;
   padding-bottom: 40px;
-  max-width: 437px;
-  max-height: 189px;
-  top: 307px;
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 32px;
-  /* or 160% */
+  font-size: 15px;
+  line-height: 1.5;
   color: #000000;
 `;
-const Break = styled.br``;
 
 const ServicesContainer = styled.div`
   position:relative;
@@ -345,38 +329,30 @@ class Home extends Component {
         <WhyContainer>
           <WhyTitle id="title">Why&nbsp;tech.at.core&nbsp;?</WhyTitle>
           <BlockContainer>
-          <Block>
-            <BlockLogo src={Logo1} />
-            <BlockTitle>Startup&nbsp;mindset</BlockTitle>
-            <BlockDescription>
-                  We enjoy bringing our years of experience into  the startup world,   and we worked with many 
-                  startup teams, so we understand the startup realities, and we know what to expect and how to look into their processes, technology, and product quite well.
-            </BlockDescription>
-            <Rectangle></Rectangle>
-          </Block>
-          
-          <Break></Break>
-          <Block>
-            <BlockLogo src={Logo2} />
-            <BlockTitle>Our&nbsp;strategy</BlockTitle>
-            <BlockDescription>
-                  There&nbsp;single&nbsp;solution,&nbsp;strategy,&nbsp;or&nbsp;approach for&nbsp;any&nbsp;corporates,&nbsp;startup,&nbsp;or&nbsp;individuals.&nbsp;Every situation is unique,
-              and one should approach&nbsp;to solve the problem based on the overall&nbsp;context, situation, and resources at&nbsp;hand.&nbsp;Fail-fast approach,&nbsp;this is where&nbsp;pragmatism comes,&nbsp;and we come into play to help&nbsp;start-ups and corporate to bring this mindset.
-            </BlockDescription>
-            <Rectangle></Rectangle>
-          </Block>
-          
-          <Break></Break>
-          <Block>
-            <BlockLogo src={Logo3} />
-            <BlockTitle>Pragmatic&nbsp;thinking</BlockTitle>
-            <BlockDescription>
-              Technology is the one that shows the direction and brings the&nbsp;business strategy into reality. We are the true believer in
-              technology as a core strategy to create world-class innovative and&nbsp;unique solutions to be the outliers in the market.
-            </BlockDescription>
-            <Rectangle></Rectangle>
-          </Block>
-          
+            <Block>
+              <BlockLogo src={Logo1} />
+              <BlockTitle>Startup&nbsp;mindset</BlockTitle>
+              <BlockDescription>
+                    We enjoy bringing our years of experience into  the startup world,   and we worked with many
+                    startup teams, so we understand the startup realities, and we know what to expect and how to look into their processes, technology, and product quite well.
+              </BlockDescription>
+            </Block>
+            <Block>
+              <BlockLogo src={Logo2} />
+              <BlockTitle>Our&nbsp;strategy</BlockTitle>
+              <BlockDescription>
+                    There single solution, strategy, or approach for any corporates, startup, or individuals. Every situation is unique,
+                and one should approach to solve the problem based on the overall context, situation, and resources at hand. Fail-fast approach, this is where pragmatism comes, and we come into play to help start-ups and corporate to bring this mindset.
+              </BlockDescription>
+            </Block>
+            <Block>
+              <BlockLogo src={Logo3} />
+              <BlockTitle>Pragmatic&nbsp;thinking</BlockTitle>
+              <BlockDescription>
+                Technology is the one that shows the direction and brings the business strategy into reality. We are the true believer in
+                technology as a core strategy to create world-class innovative and unique solutions to be the outliers in the market.
+              </BlockDescription>
+            </Block>
           </BlockContainer>
         </WhyContainer>
 
