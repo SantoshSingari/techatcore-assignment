@@ -121,9 +121,10 @@ const Polygon = styled.img`
 const WhyContainer = styled.div`
   width: 80%;
   margin: 0 auto;
+  padding-bottom: 70px;
   @media (max-width: 1200px){
     width: 100%;
-    padding: 0 30px;
+    padding: 0 30px 70px;
   }
 `;
 
@@ -176,91 +177,82 @@ const BlockDescription = styled.p`
 `;
 
 const ServicesContainer = styled.div`
-  position:relative;
-  width:100%;
-  max-width: 1920px;
-  height: 2316px;
-  top: 2267px;
   background-color: #e5e5e5;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  padding-bottom: 80px;
 `;
 
 const ContainerTitle = styled(Title)`
-  position: absolute;
-  max-width: 315px;
-  height: 2316px;
-  display:flex;
-  flex-direction:row;
-  text-align:center;
-  top: 144px;
   color: #000000;
+  text-align: center;
+  padding: 70px 0;
+  
+  @media (max-width: 800px){
+    font-size: 30px;
+    line-height: 1;
+  }
 `;
 
-type SubProps = {
-  top: string;
-};
-
 const SubContainer = styled.div`
-  position: absolute;
-  width: 941px;
-  height: 214px;
-  display:flex;
-  top: ${(props: SubProps) => props.top};
+  max-width: 941px;
+  display: flex;
+  margin-bottom: 50px;
+  
+  @media (max-width: 941px){
+    padding: 0 10px;
+  }
+  
+  @media (max-width: 480px){
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+`;
+
+const ServiceContentContainer = styled.div`
+  flex: 1;
 `;
 
 const ServiceLogo = styled.img`
-  position: absolute;
-  width: 130.54px;
-  height: 120px;
-  left: 0;
-  top: 0;
+  width: 100px;
+  height: 100px;
+  margin-right: 50px;
+  
+  @media (max-width: 480px){
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 `;
 
 const ServiceTitle = styled.h2`
-  position: absolute;
-  width: 729.95px;
-  height: 50px;
-  left: 194px;
-  top: 0px;
   font-family: Nunito;
   font-style: normal;
   font-weight: 800;
-  font-size: 34px;
-  line-height: 50px;
-  /* identical to box height, or 147% */
+  font-size: 25px;
+  line-height: 1.5;
   color: #363636;
+  margin-bottom: 30px;
 `;
 
 const ServiceDesc = styled.p`
-  position: absolute;
-  max-width: 704px;
-  width:100%
-  height: 77px;
-  left: 194px;
-  top: 85px;
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 32px;
-  /* or 160% */
+  font-size: 16px;
+  line-height: 1.5;
   color: #000000;
+  margin-bottom: 30px
 `;
 
 const More = styled(Link)`
-  position: absolute;
-  width: 681.59px;
-  height: 38.21px;
-  left: 201.42px;
-  top: 175.79px;
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 1.5;
   text-decoration: none;
   color: #0078d7;
 `;
@@ -327,11 +319,11 @@ class Home extends Component {
         </Banner>
 
         <WhyContainer>
-          <WhyTitle id="title">Why&nbsp;tech.at.core&nbsp;?</WhyTitle>
+          <WhyTitle id="title">Why tech.at.core ?</WhyTitle>
           <BlockContainer>
             <Block>
               <BlockLogo src={Logo1} />
-              <BlockTitle>Startup&nbsp;mindset</BlockTitle>
+              <BlockTitle>Startup mindset</BlockTitle>
               <BlockDescription>
                     We enjoy bringing our years of experience into  the startup world,   and we worked with many
                     startup teams, so we understand the startup realities, and we know what to expect and how to look into their processes, technology, and product quite well.
@@ -339,7 +331,7 @@ class Home extends Component {
             </Block>
             <Block>
               <BlockLogo src={Logo2} />
-              <BlockTitle>Our&nbsp;strategy</BlockTitle>
+              <BlockTitle>Our strategy</BlockTitle>
               <BlockDescription>
                     There single solution, strategy, or approach for any corporates, startup, or individuals. Every situation is unique,
                 and one should approach to solve the problem based on the overall context, situation, and resources at hand. Fail-fast approach, this is where pragmatism comes, and we come into play to help start-ups and corporate to bring this mindset.
@@ -347,7 +339,7 @@ class Home extends Component {
             </Block>
             <Block>
               <BlockLogo src={Logo3} />
-              <BlockTitle>Pragmatic&nbsp;thinking</BlockTitle>
+              <BlockTitle>Pragmatic thinking</BlockTitle>
               <BlockDescription>
                 Technology is the one that shows the direction and brings the business strategy into reality. We are the true believer in
                 technology as a core strategy to create world-class innovative and unique solutions to be the outliers in the market.
@@ -357,67 +349,79 @@ class Home extends Component {
         </WhyContainer>
 
         <ServicesContainer>
-          <ContainerTitle>Our&nbsp;services</ContainerTitle>
-          <SubContainer top="355px">
+          <ContainerTitle>Our services</ContainerTitle>
+          <SubContainer>
             <ServiceLogo src={Services_1}></ServiceLogo>
-            <ServiceTitle>
-              Product inception & Engineering practices
-            </ServiceTitle>
-            <ServiceDesc>
-              We help you to analyze and start the discovery phase of the
-              project and develop a shared understanding.
-            </ServiceDesc>
-            <More to={"#"}>more...</More>
+            <ServiceContentContainer>
+              <ServiceTitle>
+                Product inception & Engineering practices
+              </ServiceTitle>
+              <ServiceDesc>
+                We help you to analyze and start the discovery phase of the
+                project and develop a shared understanding.
+              </ServiceDesc>
+              <More to={"#"}>more...</More>
+            </ServiceContentContainer>
           </SubContainer>
-          <SubContainer top="665px">
+          <SubContainer>
             <ServiceLogo src={Services_2}></ServiceLogo>
-            <ServiceTitle>
-              Tech&nbsp;Advisory,&nbsp;Solution&nbsp;Design&nbsp;&&nbsp;Architecture
-            </ServiceTitle>
-            <ServiceDesc>
-              With the fact “best result comes from the real experts,” we are
-              true poly-skilled experts with the diversified team gives you the
-              standard design & architecture.
-            </ServiceDesc>
-            <More to={"#"}>more...</More>
+            <ServiceContentContainer>
+              <ServiceTitle>
+                Tech Advisory, Solution Design &amp; Architecture
+              </ServiceTitle>
+              <ServiceDesc>
+                With the fact “best result comes from the real experts,” we are
+                true poly-skilled experts with the diversified team gives you the
+                standard design & architecture.
+              </ServiceDesc>
+              <More to={"#"}>more...</More>
+            </ServiceContentContainer>
           </SubContainer>
-          <SubContainer top="976px">
+          <SubContainer>
             <ServiceLogo src={Services_3}></ServiceLogo>
-            <ServiceTitle>Tech Analysis Report</ServiceTitle>
-            <ServiceDesc>
-              We help your business take advantage of the emerging technology
-              and provide an extremely quality review of upcoming technology and
-              feasibility reports.
-            </ServiceDesc>
-            <More to={"#"}>more...</More>
+            <ServiceContentContainer>
+              <ServiceTitle>Tech Analysis Report</ServiceTitle>
+              <ServiceDesc>
+                We help your business take advantage of the emerging technology
+                and provide an extremely quality review of upcoming technology and
+                feasibility reports.
+              </ServiceDesc>
+              <More to={"#"}>more...</More>
+            </ServiceContentContainer>
           </SubContainer>
-          <SubContainer top="1274px">
+          <SubContainer>
             <ServiceLogo src={Services_4}></ServiceLogo>
-            <ServiceTitle>Software Development</ServiceTitle>
-            <ServiceDesc>
-              With our specialized engineering skills and years of experience,
-              we provide best software development solutions and resources.
-            </ServiceDesc>
-            <More to={"#"}>more...</More>
+            <ServiceContentContainer>
+              <ServiceTitle>Software Development</ServiceTitle>
+              <ServiceDesc>
+                With our specialized engineering skills and years of experience,
+                we provide best software development solutions and resources.
+              </ServiceDesc>
+              <More to={"#"}>more...</More>
+            </ServiceContentContainer>
           </SubContainer>
-          <SubContainer top="1588px">
+          <SubContainer>
             <ServiceLogo src={Services_5}></ServiceLogo>
-            <ServiceTitle>AI Consulting</ServiceTitle>
-            <ServiceDesc>
-              We help your business take advantage of the emerging technology
-              and provide an extremely quality review of upcoming technology and
-              feasibility reports.
-            </ServiceDesc>
-            <More to={"#"}>more...</More>
+            <ServiceContentContainer>
+              <ServiceTitle>AI Consulting</ServiceTitle>
+              <ServiceDesc>
+                We help your business take advantage of the emerging technology
+                and provide an extremely quality review of upcoming technology and
+                feasibility reports.
+              </ServiceDesc>
+              <More to={"#"}>more...</More>
+            </ServiceContentContainer>
           </SubContainer>
-          <SubContainer top="1904px">
+          <SubContainer>
             <ServiceLogo src={Services_6}></ServiceLogo>
-            <ServiceTitle>Tech & Engg Due Diligence</ServiceTitle>
-            <ServiceDesc>
-              Being founders and after working with various startups, we know
-              startup pulse well to enable the bridge between founders and VCs.
-            </ServiceDesc>
-            <More to={"#"}>more...</More>
+            <ServiceContentContainer>
+              <ServiceTitle>Tech & Engg Due Diligence</ServiceTitle>
+              <ServiceDesc>
+                Being founders and after working with various startups, we know
+                startup pulse well to enable the bridge between founders and VCs.
+              </ServiceDesc>
+              <More to={"#"}>more...</More>
+            </ServiceContentContainer>
           </SubContainer>
         </ServicesContainer>
 
