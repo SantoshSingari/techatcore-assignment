@@ -8,21 +8,7 @@ interface Props {
 }
 
 const PageStyle = styled.div`
-  position: relative;
-  width:100%;
-  max-width: 1920px;
-  height: 7091px;
-  
-
   background: #ffffff;
-
-  @media(max-width: 360px){
-    position: relative;
-    height: 6598px;
-    
-    background: #FFFFFF;
-
-  
 `;
 
 const Layout = ({ children }: Props) => {

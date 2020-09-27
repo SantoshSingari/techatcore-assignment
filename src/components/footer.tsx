@@ -7,53 +7,38 @@ const LogoPath = require("../images/logo_tech.svg") as string;
 const PolygonPath = require("../images/Polygon2.svg") as string;
 
 const Container = styled.div`
-  position: absolute;
-  width:100%;
-  max-width: 1920px;
-  height: 741px;
-  left: 0px;
-  top: 6350px;
-  display:flex;
-  align-items:center;
-  flex-direction:column;
-  justify-content:space-between;
   background: #0078d7;
+  position: relative;
+  padding-bottom: 80px;
+  
+  @media (max-width: 580px){
+    padding: 80px 10px;
+  }
 `;
 
 const ContainerTitle = styled(Title)`
- position: absolute;
-  width: 309px;
-  height: 50px;
-  // left: 801px;
-  top: 150px;
-
-
   color: #ffffff;
+  text-align: center;
+  
+  @media (max-width: 580px){
+    font-size: 30px;
+  }
 `;
 
 const TitleDesc = styled.p`
-  position: absolute;
-  width: 590px;
-  height: 50px;
-  // left: 665px;
-  top: 200px;
-  
-
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 50px;
+  line-height: 1.5;
+  text-align: center;
 
   color: #ffffff;
 `;
 
 const Mail = styled.a`
-  position: absolute;
   width: 236px;
   height: 50px;
-  // left: 842px;
-  top: 286px;
   
   font-family: Nunito;
   font-style: normal;
@@ -62,23 +47,21 @@ const Mail = styled.a`
   line-height: 50px;
 
   color: #ffffff;
+  display: block;
+  text-align: center;
+  margin: 30px auto;
 `;
 
 const Logo = styled.img`
-  position: absolute;
   width: 250.31px;
   height: 44px;
-  // left: 826px;
-  top: 486px;
-
-  `;
+  display: block;
+  margin: 70px auto 10px;
+`;
 
 const RightsText = styled.p`
-  position: absolute;
-  width: 295px;
   height: 20px;
-  // left: 808px;
-  top: 546px;
+  text-align: center;
 
   font-family: Nunito;
   font-style: normal;
@@ -93,47 +76,41 @@ const RightsText = styled.p`
 `;
 
 const GoTop = styled.div`
-  position: absolute;
   width: 42px;
   height: 81px;
-  right:62px;
-  top: 16px;
+  margin: 30px 50px 20px auto;
+  
+  @media (max-width: 580px){
+    display: none;
+  }
 `;
 
 const Top = styled.p`
-  position: absolute;
   width: 35px;
   height: 41px;
-  left: 6px;
-  top: 0px;
 
   font-family: Nunito;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 50px;
-  /* or 357% */
-
+  text-transform: uppercase;
+  text-align: center;
   color: #e5e5e5;
 `;
 
 const Rectangle = styled.div`
-  position: absolute;
   width: 42px;
   height: 42px;
-  left: 0px;
-  top: 39px;
 
   background: #ffffff;
   border-radius: 6px;
 `;
 
 const Polygon = styled.img`
-  position: absolute;
   width: 24px;
   height: 24x;
-  left: 9px;
-  top: 9px;
+  margin: 9px;
 
   border-radius: 2px;
 `;
