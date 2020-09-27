@@ -249,140 +249,99 @@ const TechName = styled.div`
 `;
 
 const BlogContainer = styled.div`
-position: absolute;
-max-width: 1641px;
-width:100%;
-height: 979px;
-top: 5319px;
-display:flex;
-flex-direction:column;
-align-items:center;
-
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 `;
 
 const BlogTitle = styled.div`
-position:relative;
-max-width: 128px;
-height: 64px;
-top:0px;
-justify-content:center;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: 800;
-font-size: 54px;
-line-height: 50px;
-
-
-color: #000000;
-
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 1.5;
+  
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+  
+  @media (max-width: 600px){
+    font-size: 30px;
+  }
 `;
 
 const GroupContainer = styled.div`
-postion:absolute;
-max-width:1641px;
-width:80%;
-height:718px;
-margin-top:100px;
-display:flex;
-flex-direction:row;
-justify-content:center;
+  display:flex;
+  justify-content: space-around;
+  padding: 0 20px;
+  
+  @media (max-width: 600px){
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
 `;
 
 const RowBlog = styled.div`
-position:relative;
-max-width:900px;
-width:100%;
-height: 718px;
-display:flex;
-flex-direction:column;
-margin:4%;
-padding:50px;
-background: #FFFFFF;
-border: 1px solid #CFCFCF;
-box-sizing: border-box;
+  padding: 30px;
+  background: #FFFFFF;
+  border: 1px solid #CFCFCF;
+  box-sizing: border-box;
+  margin: 0 10px;
+  
+  @media (max-width: 600px){
+    margin-bottom: 20px;
+  }
 `;
 
 
 const Group = styled.div`
-position:relative;
-width: 480px;
-height: 285px;
-display:flex;
-margin:1%;
-justify-content:center;
-background-color:#1E3658;
+  display:flex;
+  margin:1%;
+  justify-content:center;
+  background-color:#1E3658;
 `;
 
 const BlogImg = styled.img`
-position: absolute;
-width: 350px;
-height: 275px;
-display:flex;
+  width: 80%;
+  display:flex;
 `;
 const GroupTitle = styled.div`
-position: absolute;
-width: 506px;
-height: 94px;
-top:377px;
-display:flex;
-margin:1%;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: 800;
-font-size: 26px;
-line-height: 46px;
-color: #363636;
+  display:flex;
+  margin-bottom: 20px;
+ 
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.5;
+  color: #363636;
  `;
 const Date = styled.div`
-position: absolute;
-width: 152px;
-height: 38px;
-top:508px;
-display:flex;
-margin:1%;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 32px;
-color: #000000;
-
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #000000;
+  margin-bottom: 20px;
 `;
 
 const Name = styled.div`
-position: absolute;
-width: 253px;
-height: 63px;
-top: 570px;
-display:flex;
-margin:1%;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 32px;
-color: #000000;
-
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #000000;
 `;
 
 const Dept = styled.div`
-position: absolute;
-width: 253px;
-height: 63px;
-top: 610px;
-display:flex;
-margin:1%;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 32px;
-color: #000000;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #000000;
 `;
 
 export default class career extends Component {
