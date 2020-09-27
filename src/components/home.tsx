@@ -8,6 +8,7 @@ import Button from "./common/button";
 import Title from "./common/title";
 import Block from "./common/block";
 import Rectangle from "./common/rectangle";
+import Header from "./header";
 
 const Team = require("../images/banner_background_image.svg") as string;
 const PolygonPath = require("../images/Polygon 1.svg") as string;
@@ -24,96 +25,58 @@ const BrandImgPath = require("../images/image1.svg") as string;
 
 const Banner = styled.div`
   &.bgImage {
-    position: absolute;
-    width:100%;
-    max-width:1720px;
-    height:1123px;
-    
-    display:flex;
-    justify-content:center;
-    background: url(${Team}) no-repeat;
-    background-size:cover;
+    background: url(${Team}) top center no-repeat;
+    background-size: 100%;
     @media (max-width:1094px){
-       height: 640px;
-     border-radius: 0px;
     }
   }
   
   &.bgShade {
-    position: absolute;
-    width:100%;
-    max-width: 1620px;
-    height: 1125px;
-    left: 0px;
-    top: 0px;
-    background: #000000;
-    opacity: 0.66;
-    border: 1px solid #000000;
-    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.66);
+    
     @media (max-width:360px){
-      height: 640px;
+      
     }
   }
 `;
 
 const BannerContent = styled.div`
-  position: absolute;
-  width: 880px;
-  height: 503px;
-  left: 138px;
-  top: 326px;
-  z-index:2;
-  display:flex;
-  align-items:left;
-  flex-direction:column;
-   
+  padding: 60px 0;
+  max-width: 80%;
+  margin: 0 auto;
 `;
 
 const ContentOne = styled(Title)`
-  position: absolute;
   width: 800px;
-  height: 123px;
-  top: 0;
   color: #ffffff;
-  display:flex;
+  padding: 100px 0 30px;
 `;
 
 const ContenTwo = styled.div`
-  position: absolute;
   max-width: 724px;
-  height: 146px;
-  left: 0px;
-  top: 191px;
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
   line-height: 46px;
   color: #ffffff;
-  
 `;
 const ContentThree = styled(Button)`
-  position: absolute;
-  top: 443px;
   background: #0078D7;
   border-radius: 100px;
-  z-index:20;
+  margin: 100px 0 50px;
 `;
 const Container = styled.div`
-  position: absolute;
-  width:100%;
-  max-width: 106px;
-  height: 62px;
-  left: 48%;
-  top: 1006px;
+  width: 106px;
+  margin: 0 auto;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
   align-items:center;
+  padding-bottom: 40px;
 `;
 
 const ScrollDown = styled.div`
-   position:absolute;
    width: 106px;
    height: 50px;
    left: 0px;
@@ -127,7 +90,6 @@ const ScrollDown = styled.div`
 `;
 
 const Polygon = styled.img`
-  position: absolute;
   width: 24px;
   height: 24px;
   
@@ -136,7 +98,6 @@ const Polygon = styled.img`
 `;
 
 const WhyContainer = styled.div`
-  position: absolute;
   width:100%;
   max-width: 1920px;
   height: 818px;
@@ -149,7 +110,6 @@ const WhyContainer = styled.div`
 `;
 
 const WhyTitle = styled(Title)`
-  position: absolute;
   max-width: 473px;
   height: 50px;
   top: 0px;
@@ -158,7 +118,6 @@ const WhyTitle = styled(Title)`
   justify-content:center;
 `;
 const BlockContainer = styled.div`
-position:absolute;
 width:90%;
 max-width:1640px;
 top:178px;
@@ -299,11 +258,9 @@ const More = styled(Link)`
 `;
 
 const BrandContainer = styled.div`
-  position:absolute;
   max-width: 1563px;
   width:100%;
   height: 521px;
-  top: 4771px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -311,8 +268,6 @@ const BrandContainer = styled.div`
 `;
 
 const BrandTitle = styled(Title)`
-  position: absolute;
-  top: 0;
   display:flex;
 `;
 const BrandImg = styled.img`
@@ -320,19 +275,14 @@ const BrandImg = styled.img`
   width:90%;
   max-width: 1563px;
   height: 308px;
-  top: 213px;
   display:flex;
 `;
 
 const SlideContainer = styled.div`
-position: absolute;
-max-width: 1920px;
-width:100%;
-height: 874px;
-left: 0px;
-top: 5475px;
-background: #F3F3F3;
-
+  max-width: 1920px;
+  width:100%;
+  height: 874px;
+  background: #F3F3F3;
 `;
 
 class Home extends Component {
@@ -346,6 +296,7 @@ class Home extends Component {
         <Banner className="bgImage">
           <Banner className="bgShade">
             <BannerContent id="bContent">
+              <Header index={0}></Header>
               <ContentOne>
                 Over decade experience with poly   
                 skills engineering specialists

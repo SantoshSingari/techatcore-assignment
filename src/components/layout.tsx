@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
 import styled from "@emotion/styled";
 import Helmet from "react-helmet";
-import Header from "./header";
 import Footer from "./footer";
 
 interface Props {
@@ -45,7 +44,6 @@ const Layout = ({ children }: Props) => {
         <title>tech.at.core</title>
       </Helmet>
       <PageStyle>
-        <Header index={0}></Header>
         <main>{children}</main>
         <Footer></Footer>
       </PageStyle>
