@@ -132,63 +132,47 @@ const ValueDesc = styled.p`
 `;
 
 const TechContainer = styled.div`
-position: absolute;
-max-width: 1661px;
-width:100%;
-height: 412px;
-top: 2415px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 `;
 const TechTitle = styled.div`
-  position: absolute;
-  max-width: 478px;
-  width:100%
-  height: 64px;
-  display:flex;
-
   font-family: Nunito;
   font-style: normal;
   font-weight: 800;
   font-size: 54px;
-  line-height: 50px;
+  line-height: 1.5;
+  
   color: #000000;
+  text-align: center;
+  padding: 50px 0;
+  
+  @media (max-width: 600px){
+    font-size: 30px;
+  }
 `;
 
 const TickContainer = styled.div`
-position:absolute;
-max-width:1720px;
-width:84%;
-height:262px;
-top:350px;
-display:flex;
-flex-flow:row wrap;
-
+  display:flex;
+  flex-flow:row wrap;
+  padding: 0 50px;
 `;
 
 const TechBox = styled.div`
-postion:absolute;
-max-width:350px;
-width:100%;
-height:60px;
-display:flex;
-flex-direction:row;
+  width:300px;
+  display:flex;
+  flex-direction:row;
+  margin: 0 10px 40px;
 `;
 
 const TechTick = styled.img`
-  position: absolute;
   width: 40px;
   height: 40px;
   display:flex;
-  // padding:10px;
 `;
 
 const TechDesc = styled.div`
-  position: absolute;
   max-width: 226px;
   height: 56px;
   display:flex;
@@ -196,10 +180,14 @@ const TechDesc = styled.div`
 
   font-family: Nunito;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 800; 
   font-size: 25px;
-  line-height: 50px;
+  line-height: 1.5;
   color: #363636;
+  
+  @media (max-width: 600px){
+    font-size: 18px;
+  }
 `;
 
 const TeamContainer = styled.div`
