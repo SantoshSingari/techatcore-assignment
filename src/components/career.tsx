@@ -34,46 +34,36 @@ const HeadTitle = styled(Title)`
 `;
 
 const WhyContainer = styled.div`
-  position:absolute;
-  max-width:1920px;
-  width:100%;
-  height: 534px;
   display:flex;
   flex-direction:column;
   align-items:center;
-  top: 597px;
   justify-content:center;
 `;
 
 const WhyTitle = styled(Title)`
-  position: absolute;
-  max-width: 817px;
-  width:100%;
-  height: 534px;
-  display:flex;
-  justify-content:center;
-  top: 0px;
-  
-
   color: #000000;
+  padding: 50px 0;
+  
+  @media (max-width: 600px){
+    font-size: 30px;
+  }
 `;
 
 const Desc = styled.p`
-  position: absolute;
   max-width: 817px;
-  height: 333px;
-  top: 201px;
-  display:flex;
-  justify-content:center;
 
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 32px;
-  /* or 160% */
-
   color: #000000;
+  
+  @media (max-width: 817px){
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
 `;
 
 const Break = styled.br``;
