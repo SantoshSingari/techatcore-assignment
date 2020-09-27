@@ -258,24 +258,17 @@ const More = styled(Link)`
 `;
 
 const BrandContainer = styled.div`
-  max-width: 1563px;
-  width:100%;
-  height: 521px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-bottom: 70px;
 `;
 
 const BrandTitle = styled(Title)`
-  display:flex;
+  text-align: center;
+  padding: 70px 0;
 `;
 const BrandImg = styled.img`
-  position: absolute;
-  width:90%;
-  max-width: 1563px;
-  height: 308px;
-  display:flex;
+  width: 100%;
 `;
 
 const SlideContainer = styled.div`
