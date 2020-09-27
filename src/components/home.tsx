@@ -26,7 +26,7 @@ const BrandImgPath = require("../images/image1.svg") as string;
 const Banner = styled.div`
   &.bgImage {
     background: url(${Team}) top center no-repeat;
-    background-size: 100%;
+    background-size: cover;
     @media (max-width:1094px){
     }
   }
@@ -50,6 +50,17 @@ const ContentOne = styled(Title)`
   width: 800px;
   color: #ffffff;
   padding: 100px 0 30px;
+  
+  @media (max-width:860px){
+    width: auto;
+    font-size: 40px;
+    line-height: 1.5;
+  }
+  
+  @media (max-width:480px){
+    font-size: 25px;
+    padding: 50px 0 30px;
+  }
 `;
 
 const ContenTwo = styled.div`
@@ -60,11 +71,20 @@ const ContenTwo = styled.div`
   font-size: 30px;
   line-height: 46px;
   color: #ffffff;
+  
+  @media (max-width:480px){
+    font-size: 20px;
+    line-height: 1.5;
+  }
 `;
 const ContentThree = styled(Button)`
   background: #0078D7;
   border-radius: 100px;
   margin: 100px 0 50px;
+  
+  @media (max-width:480px){
+    margin: 30px 0 0;
+  }
 `;
 const Container = styled.div`
   width: 106px;
@@ -74,6 +94,10 @@ const Container = styled.div`
   justify-content:space-between;
   align-items:center;
   padding-bottom: 40px;
+  
+  @media (max-width:480px){
+    display: none;
+  }
 `;
 
 const ScrollDown = styled.div`
