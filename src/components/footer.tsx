@@ -19,9 +19,11 @@ const Container = styled.div`
 const ContainerTitle = styled(Title)`
   color: #ffffff;
   text-align: center;
+  margin:10px;
   
   @media (max-width: 580px){
     font-size: 30px;
+
   }
 `;
 
@@ -32,7 +34,6 @@ const TitleDesc = styled.p`
   font-size: 18px;
   line-height: 1.5;
   text-align: center;
-
   color: #ffffff;
 `;
 
@@ -45,7 +46,6 @@ const Mail = styled.a`
   font-weight: normal;
   font-size: 24px;
   line-height: 50px;
-
   color: #ffffff;
   display: block;
   text-align: center;
@@ -62,16 +62,13 @@ const Logo = styled.img`
 const RightsText = styled.p`
   height: 20px;
   text-align: center;
-
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 20px;
   /* identical to box height, or 167% */
-
   
-
   color: #cecece;
 `;
 
@@ -88,7 +85,6 @@ const GoTop = styled.div`
 const Top = styled.p`
   width: 35px;
   height: 41px;
-
   font-family: Nunito;
   font-style: normal;
   font-weight: bold;
@@ -102,7 +98,6 @@ const Top = styled.p`
 const Rectangle = styled.div`
   width: 42px;
   height: 42px;
-
   background: #ffffff;
   border-radius: 6px;
 `;
@@ -111,7 +106,6 @@ const Polygon = styled.img`
   width: 24px;
   height: 24x;
   margin: 9px;
-
   border-radius: 2px;
 `;
 

@@ -6,31 +6,58 @@ import Button from "./common/button";
 const LogoPath = require("../images/logo_tech.svg") as string;
 
 const TopNav = styled.header`
+  position: absolute;
+  width:80%;  
+  max-width: 1640px;
+  height: 50px;
+  left:138px;
+  top: 82px;
+  z-index: 1;
   display: flex;
   justify-content: flex-end;
 
-  @media (max-width:250.31px){
-    align-item:center;
+  @media (max-width:614px){
+    position:absolute;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    top: 37px;
+    left:32px;
+    z-index: 2:
   }
 `;
 const LogoLink = styled(Link)`
-  margin-right: auto;
-`;
+  margin-right:auto;
+  @media (width:614px){
+    position:absolute;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    top: 37px;
+    border:2px solid red;
+    z-index: 2:
+  }
+  `;
 
 const LogoTech = styled.img`
+  position: absolute;
   width: 250.31px;
   height: 44px;
  
-  @media (width:250.31){
+  @media (width:614px){
+    position:relative;
+    width:80%;
     height: 44px;
-    left: 32px;
-    top: 37px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    
 `;
 
 const MenuContainer = styled.nav`
-  @media (max-width:768px){
-    display:none;
-  }
+@media (max-width:768px){
+  display:none;
+}
 `;
 
 const MenuItem = styled(Link)`

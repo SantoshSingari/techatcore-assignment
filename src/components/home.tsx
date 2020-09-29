@@ -26,7 +26,8 @@ const Banner = styled.div`
   &.bgImage {
     background: url(${Team}) top center no-repeat;
     background-size: cover;
-    @media (max-width:1094px){
+
+    @media (max-width:860px){
     }
   }
   
@@ -52,7 +53,7 @@ const ContentOne = styled(Title)`
   
   @media (max-width:860px){
     width: auto;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1.5;
   }
   
@@ -67,7 +68,7 @@ const ContenTwo = styled.div`
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 46px;
   color: #ffffff;
   
@@ -121,9 +122,11 @@ const Polygon = styled.img`
 const WhyContainer = styled.div`
   width: 80%;
   margin: 0 auto;
+  margin-top:100px;
   padding-bottom: 70px;
   @media (max-width: 1200px){
     width: 100%;
+    margin-top:10px;
     padding: 0 30px 70px;
   }
 `;
@@ -131,6 +134,7 @@ const WhyContainer = styled.div`
 const WhyTitle = styled(Title)`
   color: #000000;
   text-align: center;
+  margin-top:0px;
   padding: 50px 0;
   
   @media (max-width: 800px){
@@ -140,9 +144,11 @@ const WhyTitle = styled(Title)`
 `;
 const BlockContainer = styled.div`
   display:flex;
+  margin-top:100px;
   
   @media (max-width: 800px){
     flex-direction: column;
+    margin-top:30px;
   }
 `;
 const BlockLogo = styled.img`
@@ -178,6 +184,7 @@ const BlockDescription = styled.p`
 
 const ServicesContainer = styled.div`
   background-color: #e5e5e5;
+  margin-top:50px;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -188,10 +195,11 @@ const ServicesContainer = styled.div`
 const ContainerTitle = styled(Title)`
   color: #000000;
   text-align: center;
-  padding: 70px 0;
+  margin:90px;
   
   @media (max-width: 800px){
     font-size: 30px;
+    margin:30px;
     line-height: 1;
   }
 `;
@@ -199,10 +207,11 @@ const ContainerTitle = styled(Title)`
 const SubContainer = styled.div`
   max-width: 941px;
   display: flex;
-  margin-bottom: 50px;
+  margin-top:50px;
   
   @media (max-width: 941px){
     padding: 0 10px;
+    margin-top:30px;
   }
   
   @media (max-width: 480px){
@@ -224,6 +233,7 @@ const ServiceLogo = styled.img`
   @media (max-width: 480px){
     margin-right: 0;
     margin-bottom: 20px;
+    
   }
 `;
 
@@ -260,12 +270,16 @@ const More = styled(Link)`
 const BrandContainer = styled.div`
   max-width: 80%;
   margin: 0 auto;
+  margin-top:100px;
   padding-bottom: 70px;
+  dispaly:flex;
+  flex-direction:column;
+  text-align: center;
+  justify-content:center;
 `;
 
 const BrandTitle = styled(Title)`
-  text-align: center;
-  padding: 70px 0;
+ padding:0px;
   
   @media (max-width: 700px){
     font-size: 30px;
@@ -274,6 +288,8 @@ const BrandTitle = styled(Title)`
 `;
 const BrandImg = styled.img`
   width: 100%;
+  margin-top:100px;
+
 `;
 
 const SlideContainer = styled.div`

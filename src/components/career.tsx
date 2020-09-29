@@ -24,7 +24,7 @@ const BgShade = styled.div`
   background: #000000;
   border: 1px solid #000000;
   box-sizing: border-box;
-  padding: 70px 50px;
+  padding: 100px 50px;
 `;
 
 const HeadTitle = styled(Title)`
@@ -38,6 +38,7 @@ const WhyContainer = styled.div`
   flex-direction:column;
   align-items:center;
   justify-content:center;
+  margin-top:80px;
   padding-bottom: 70px;
 `;
 
@@ -52,6 +53,7 @@ const WhyTitle = styled(Title)`
 
 const Desc = styled.p`
   max-width: 817px;
+  margin-top:100px;
 
   font-family: Nunito;
   font-style: normal;
@@ -63,6 +65,7 @@ const Desc = styled.p`
   @media (max-width: 817px){
     padding: 0 10px;
     font-size: 18px;
+    margin:25px;
     line-height: 1.5;
   }
 `;
@@ -73,34 +76,44 @@ const ValuesContainer = styled.div`
   display: flex;
   flex-direction:column;
   background: #E5E5E5;
+  margin-top:80px;
   padding: 0 20px 70px
 `;
 
 const ValueTitle = styled(Title)`
   color: #000000;
   text-align: center;
+  margin:50px;
   padding: 50px 0;
   
   @media (max-width: 600px){
     font-size: 30px;
+    margin:30px;
   }
 `;
 
 const ValueImg = styled.img`
   width:60px;
   height: 60px;
+  margin:30px;
+ @media (max-width:860px){
+   margin:20px;
+ }
 `;
 
 const ValueContentContainer = styled.div`
   display: flex;
+  margin:10%;
+  margin-top:30px;
   @media (max-width: 760px){
     flex-direction: column;
+    margin-top:20px;
   }
 `;
 
 const ValueContentBlock = styled.div`
   flex: 1;
-  margin: 0 10px;
+  margin:10px;
   
   @media (max-width: 760px){
     margin: 0 0 40px;
@@ -114,10 +127,14 @@ const ValueContentTitle = styled.div`
   font-size: 25px;
   line-height: 1.5;
   color: #363636;
+  margin-top:30px;
+  @media (max-width:860px){
+    margin-top:10px;
+  }
 `;
 
 const ValueDesc = styled.p`
-  margin-top: 50px;
+  margin-top: 15px;
 
   font-family: Nunito;
   font-style: normal;
@@ -125,9 +142,11 @@ const ValueDesc = styled.p`
   font-size: 20px;
   line-height: 32px;
   color: #000000;
+  margin-top:40px;
   
   @media (max-width: 760px){
     font-size: 18px;
+    margin-top:10px;
   }
 `;
 
@@ -143,13 +162,14 @@ const TechTitle = styled.div`
   font-weight: 800;
   font-size: 54px;
   line-height: 1.5;
-  
+  margin-top:60px;
   color: #000000;
   text-align: center;
   padding: 50px 0;
   
   @media (max-width: 600px){
     font-size: 30px;
+    margin:30px;
   }
 `;
 
@@ -157,13 +177,19 @@ const TickContainer = styled.div`
   display:flex;
   flex-flow:row wrap;
   padding: 0 50px;
+  margin:10%;
+  margin-top:30px;
 `;
 
 const TechBox = styled.div`
   width:300px;
+  height:56px;
   display:flex;
   flex-direction:row;
-  margin: 0 10px 40px;
+  margin:30px;
+  @media(max-width:860px){
+    margin:10px;
+  }
 `;
 
 const TechTick = styled.img`
@@ -176,7 +202,7 @@ const TechDesc = styled.div`
   max-width: 226px;
   height: 56px;
   display:flex;
-  margin-left:50px;
+  margin-left:20px;
 
   font-family: Nunito;
   font-style: normal;
@@ -215,6 +241,10 @@ const MemberContainer = styled.div`
   flex-flow:row wrap;
   justify-content:center;
   padding: 0 20px;
+  margin:50px;
+  @media (max-width:860px){
+    margin:30px;
+  }
 `;
 
 const TeamBox = styled.div`
@@ -252,6 +282,7 @@ const BlogContainer = styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
+  margin-top:50px;
 `;
 
 const BlogTitle = styled.div`
@@ -260,13 +291,15 @@ const BlogTitle = styled.div`
   font-weight: 800;
   font-size: 54px;
   line-height: 1.5;
+  margin-top:30px;
   
   color: #000000;
   text-align: center;
-  padding: 50px 0;
+  padding: 30px 0;
   
   @media (max-width: 600px){
     font-size: 30px;
+    margin-top:25px;
   }
 `;
 
@@ -274,6 +307,7 @@ const GroupContainer = styled.div`
   display:flex;
   justify-content: space-around;
   padding: 0 20px;
+  margin-top:50px;
   
   @media (max-width: 600px){
     flex-direction: column;
@@ -421,21 +455,21 @@ export default class career extends Component {
           <TechBox>
           <TechTick src={tickpath}></TechTick>
           <TechDesc>
-            Lead by example mindset
+            Lead&nbsp;by&nbsp;example&nbsp;mindset
           </TechDesc>
           </TechBox>
 
           <TechBox>
           <TechTick src={tickpath}></TechTick>
           <TechDesc>
-            Flexible working hours
+            Flexible&nbsp;working&nbsp;hours
           </TechDesc>
           </TechBox>
 
           <TechBox>
           <TechTick src={tickpath}></TechTick>
           <TechDesc>
-            Flexible working machine
+            Flexible&nbsp;working&nbsp;machine
           </TechDesc>
           </TechBox>
           </TickContainer>
