@@ -11,8 +11,8 @@ const tickpath = require("../images/tick.svg") as string;
 const imagepath = require("../images/image.svg") as string;
 const Jay = require("../images/team/Jay.png") as string;
 const Prasad = require("../images/team/prasad.jpg") as string;
-const Raju = require("../images/team/RajuSidda.jpg") as string;
-const Chetan = require("../images/team/ChetanBandari.png") as string;
+const Raju = require("../images/team/RajuSidda.jpeg") as string;
+const Chetan = require("../images/team/ChetanBandari.jpg") as string;
 const Vijay = require("../images/team/VijayPratap.jpg") as string;
 const Vandana = require("../images/team/VandanaKumari.jpg") as string;
 const Shiva = require("../images/team/ShivaSai.jpg") as string;
@@ -55,7 +55,7 @@ display:none;
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
+  font-size: 24px;
   line-height:1.5;
   
   background: #0078D7;
@@ -281,17 +281,15 @@ const MemberContainer = styled.div`
   flex-flow:row wrap;
   padding:0px 50px;
   gap:40px;
-  
   margin:120px;
   @media (max-width:860px){
-    margin:5px;
-    padding:0px 25px;
+    margin:10px;
+    padding:0px 45px;
   }
 `;
-
 const TeamBox = styled.div`
-  width:300px;
-  height:453px;
+  width:220px;
+  height:320px;
   @media (max-width:860px){
   width:358px;
   }
@@ -300,11 +298,16 @@ const TeamBox = styled.div`
 
 const TeamMember = styled.img`
   width:100%; 
-  max-width:300px;
-  height:342px;
+  max-width:220px;
+  height:250px;
   background: #ffffff;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  user-select:none;
   @media (max-width:860px){
     width:358px;
+    -webkit-filter: grayscale(100%);
+     filter: grayscale(100%);
   }
 `;
 
@@ -312,9 +315,10 @@ const MemberName = styled.div`
   font-family: Nunito;
   font-style: normal;
   font-weight: 800;
-  font-size: 28px;
+  font-size: 21px;
   line-height: 1.5;
   color: #363636;
+  white-space:nowrap
 `;
 
 
@@ -434,7 +438,7 @@ export default class career extends Component {
         <BgShade>
           <Header index={0}></Header>
           <MenuItem to={"/"}>
-            <HomeButton width="273px" height="60px" bgColor="#BBBBBB">Home</HomeButton>
+            <HomeButton width="273px" height="60px" bgColor="#BBBBBB">HOME</HomeButton>
           </MenuItem>
           <HeadTitle>Careers</HeadTitle>
         </BgShade>
@@ -552,7 +556,7 @@ export default class career extends Component {
 
             <TeamBox>
               <TeamMember src={Chetan}></TeamMember>
-              <MemberName>Chetan Kumar Bandari</MemberName>
+              <MemberName>Chetan&nbsp;Kumar&nbsp;Bandari</MemberName>
               <TechName>DevOps Engineer</TechName>
             </TeamBox>
 
@@ -576,7 +580,7 @@ export default class career extends Component {
 
             <TeamBox>
               <TeamMember src={Shiva}></TeamMember>
-              <MemberName>ShivaSai Dikonda</MemberName>
+              <MemberName>Shiva&nbsp;Sai&nbsp;Dikonda</MemberName>
               <TechName> Software Engineer</TechName>
             </TeamBox>
 
@@ -588,7 +592,7 @@ export default class career extends Component {
 
             <TeamBox>
               <TeamMember src={Vivek} ></TeamMember>
-              <MemberName>Vivek Tej</MemberName>
+              <MemberName>Vivek&nbsp;Tej&nbsp;Aggu</MemberName>
               <TechName> Software Intern</TechName>
             </TeamBox>
 

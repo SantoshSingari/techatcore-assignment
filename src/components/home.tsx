@@ -105,7 +105,7 @@ display:none;
   font-family: Nunito;
   font-style: normal;
   font-weight:normal;
-  font-size: 28px;
+  font-size: 24px;
   line-height:1.5;
   text-decaration:none;
   z-index:-4;
@@ -348,7 +348,7 @@ class Home extends Component {
                 WORK WITH US
               </ContentThree>
               <MenuItem to={"/careers"}>
-                <CareerButton width="273px" height="60px" bgColor="#0078D7">Career</CareerButton>
+                <CareerButton width="273px" height="60px" bgColor="#0078D7">CAREERS</CareerButton>
               </MenuItem>
             </BannerContent>
             <Link to={"#title"}>
