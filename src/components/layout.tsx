@@ -9,6 +9,7 @@ interface Props {
 
 const PageStyle = styled.div`
   background: #ffffff;
+  overflow:hidden;
 `;
 
 const Layout = ({ children }: Props) => {

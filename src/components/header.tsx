@@ -63,6 +63,7 @@ const MenuContainer = styled.nav`
 const MenuItem = styled(Link)`
   &.active {
     background-color: #ffffff;
+    text-decaration:none;
   }
   padding-left: 17.02px;
 `;

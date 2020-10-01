@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import Layout from "./layout";
 import styled from "@emotion/styled";
 import Title from "./common/title";
+import Button from "./common/button";
 import Header from "./header";
+import { Link } from "gatsby";
 
 const valuepath = require("../images/value.svg") as string;
 const tickpath = require("../images/tick.svg") as string;
@@ -24,13 +26,42 @@ const BgShade = styled.div`
   background: #000000;
   border: 1px solid #000000;
   box-sizing: border-box;
-  padding: 100px 50px;
+  padding: 100px 20px;
+  
 `;
 
 const HeadTitle = styled(Title)`
   color: #ffffff;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 100px;
+  @media (max-width:860px){
+    margin-top:40px
+  }
+`;
+const MenuItem = styled(Link)`
+display:none;
+@media (max-width:860px){
+  margin-top:30px;
+  display:block;
+  text-decoration:none;
+  padding-left: 17.02px;
+}
+`;
+
+const HomeButton = styled(Button)`
+display:none;
+@media (max-width:860px){
+  display:block;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height:1.5;
+  
+  background: #0078D7;
+  border-radius: 100px;
+  margin: 100px 0 50px;
+}
 `;
 
 const WhyContainer = styled.div`
@@ -176,17 +207,22 @@ const TechTitle = styled.div`
 const TickContainer = styled.div`
   display:flex;
   flex-flow:row wrap;
-  padding: 0 50px;
-  margin:10%;
+  left:10%;
+  padding: 0 150px;
   margin-top:30px;
+  @media (max-width:860px){
+    margin-top:0px;
+    padding:0 30px;
+  }
 `;
 
 const TechBox = styled.div`
-  width:300px;
+  max-width:250px;
   height:56px;
   display:flex;
   flex-direction:row;
-  margin:30px;
+  margin-right:105px;
+  margin-bottom:40px;
   @media(max-width:860px){
     margin:10px;
   }
@@ -202,12 +238,12 @@ const TechDesc = styled.div`
   max-width: 226px;
   height: 56px;
   display:flex;
-  margin-left:20px;
+  margin-left:15px;
 
   font-family: Nunito;
   font-style: normal;
   font-weight: 800; 
-  font-size: 25px;
+  font-size: 23px;
   line-height: 1.5;
   color: #363636;
   
@@ -218,6 +254,9 @@ const TechDesc = styled.div`
 
 const TeamContainer = styled.div`
   background: #e5e5e5;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 `;
 
 
@@ -234,29 +273,39 @@ const TeamTitle = styled.div`
   
   @media (max-width: 600px){
     font-size: 30px;
+
   }
 `;
 const MemberContainer = styled.div`
   display:flex;
   flex-flow:row wrap;
-  justify-content:center;
-  padding: 0 20px;
-  margin:50px;
+  padding:0px 50px;
+  gap:40px;
+  
+  margin:120px;
   @media (max-width:860px){
-    margin:30px;
+    margin:5px;
+    padding:0px 25px;
   }
 `;
 
 const TeamBox = styled.div`
-  width: 280px;
-  margin:12px;
+  width:300px;
+  height:453px;
+  @media (max-width:860px){
+  width:358px;
+  }
+  
 `;
 
 const TeamMember = styled.img`
-  max-width: 368px;
-  width:100%;
-  height: 342px;
+  width:100%; 
+  max-width:300px;
+  height:342px;
   background: #ffffff;
+  @media (max-width:860px){
+    width:358px;
+  }
 `;
 
 const MemberName = styled.div`
@@ -384,10 +433,13 @@ export default class career extends Component {
       <Layout>
         <BgShade>
           <Header index={0}></Header>
+          <MenuItem to={"/"}>
+            <HomeButton width="273px" height="60px" bgColor="#BBBBBB">Home</HomeButton>
+          </MenuItem>
           <HeadTitle>Careers</HeadTitle>
         </BgShade>
         <WhyContainer>
-          <WhyTitle id="title">Why tech.at.core ?</WhyTitle>
+          < WhyTitle id="title">Why tech.at.core ?</WhyTitle>
           <Desc>
             We are passionate Software specialist across various disciplines. We
             value quality of work and challenge continuous learning throughout
@@ -436,144 +488,144 @@ export default class career extends Component {
         </ValuesContainer>
         <TechContainer>
           <TechTitle>Life at tech.at.core</TechTitle>
-          
+
           <TickContainer>
-          <TechBox>
-          <TechTick src={tickpath}></TechTick>
-          <TechDesc>
-            Being Human
+            <TechBox>
+              <TechTick src={tickpath}></TechTick>
+              <TechDesc>
+                Being Human
           </TechDesc>
-          </TechBox>
+            </TechBox>
 
-          <TechBox>
-          <TechTick src={tickpath}></TechTick>
-          <TechDesc>
-            Unblock people
+            <TechBox>
+              <TechTick src={tickpath}></TechTick>
+              <TechDesc>
+                Unblock&nbsp;people
           </TechDesc>
-          </TechBox>
+            </TechBox>
 
-          <TechBox>
-          <TechTick src={tickpath}></TechTick>
-          <TechDesc>
-            Lead&nbsp;by&nbsp;example&nbsp;mindset
+            <TechBox>
+              <TechTick src={tickpath}></TechTick>
+              <TechDesc>
+                Lead&nbsp;by&nbsp;example&nbsp;mindset
           </TechDesc>
-          </TechBox>
+            </TechBox>
 
-          <TechBox>
-          <TechTick src={tickpath}></TechTick>
-          <TechDesc>
-            Flexible&nbsp;working&nbsp;hours
+            <TechBox>
+              <TechTick src={tickpath}></TechTick>
+              <TechDesc>
+                Flexible&nbsp;working&nbsp;hours
           </TechDesc>
-          </TechBox>
+            </TechBox>
 
-          <TechBox>
-          <TechTick src={tickpath}></TechTick>
-          <TechDesc>
-            Flexible&nbsp;working&nbsp;machine
+            <TechBox>
+              <TechTick src={tickpath}></TechTick>
+              <TechDesc>
+                Flexible&nbsp;working&nbsp;machine
           </TechDesc>
-          </TechBox>
+            </TechBox>
           </TickContainer>
         </TechContainer>
-        
+
         <TeamContainer>
           <TeamTitle>Our team</TeamTitle>
 
           <MemberContainer>
 
-          <TeamBox>
-          <TeamMember src={Jay}></TeamMember>
-          <MemberName>Jayasagar Jagirapu</MemberName>
-          <TechName>Founder</TechName>
-          </TeamBox>
- 
-          <TeamBox>
-          <TeamMember src={Prasad}></TeamMember>
-          <MemberName>Prasad Jagirapu</MemberName>
-          <TechName>Administration Head</TechName>
-          </TeamBox>
+            <TeamBox>
+              <TeamMember src={Jay}></TeamMember>
+              <MemberName>Jayasagar Jagirapu</MemberName>
+              <TechName>Founder</TechName>
+            </TeamBox>
 
-          <TeamBox>
-          <TeamMember src={Raju}></TeamMember>
-          <MemberName>Raju Sidda</MemberName>
-          <TechName>Senior Software Engineer</TechName>
-          </TeamBox>
- 
-          <TeamBox>
-          <TeamMember src={Chetan}></TeamMember>
-          <MemberName>Chetan Kumar Bandari</MemberName>
-          <TechName>DevOps Engineer</TechName>
-          </TeamBox>
+            <TeamBox>
+              <TeamMember src={Prasad}></TeamMember>
+              <MemberName>Prasad Jagirapu</MemberName>
+              <TechName>Administration Head</TechName>
+            </TeamBox>
 
-          <TeamBox>
-          <TeamMember src={Vandana}></TeamMember>
-          <MemberName>Vandana Kumari</MemberName>
-          <TechName>QA Engineer</TechName>
-          </TeamBox>
+            <TeamBox>
+              <TeamMember src={Raju}></TeamMember>
+              <MemberName>Raju Sidda</MemberName>
+              <TechName>Senior Software Engineer</TechName>
+            </TeamBox>
 
-          <TeamBox>
-          <TeamMember src={Vijay}></TeamMember>
-          <MemberName>Vijay Pratap</MemberName>
-          <TechName>Software Engineer</TechName>
-          </TeamBox>
+            <TeamBox>
+              <TeamMember src={Chetan}></TeamMember>
+              <MemberName>Chetan Kumar Bandari</MemberName>
+              <TechName>DevOps Engineer</TechName>
+            </TeamBox>
 
-          <TeamBox>
-          <TeamMember src={Sushma}></TeamMember>
-          <MemberName> Sushma Boddu</MemberName>
-          <TechName> Software Engineer</TechName>
-          </TeamBox>
+            <TeamBox>
+              <TeamMember src={Vandana}></TeamMember>
+              <MemberName>Vandana Kumari</MemberName>
+              <TechName>QA Engineer</TechName>
+            </TeamBox>
 
-          <TeamBox>
-          <TeamMember src={Shiva}></TeamMember>
-          <MemberName>ShivaSai Dikond</MemberName>
-          <TechName> Software Engineer</TechName>
-          </TeamBox>
+            <TeamBox>
+              <TeamMember src={Vijay}></TeamMember>
+              <MemberName>Vijay Pratap</MemberName>
+              <TechName>Software Engineer</TechName>
+            </TeamBox>
 
-          <TeamBox>
-          <TeamMember src={Ravalika}></TeamMember>
-          <MemberName>Ravalika Kesari</MemberName>
-          <TechName> Software Engineer</TechName>
-          </TeamBox>
-          
-          <TeamBox>
-          <TeamMember src={Vivek} ></TeamMember>
-          <MemberName>Vivek Tej</MemberName>
-          <TechName> Software Intern</TechName>
-          </TeamBox>
+            <TeamBox>
+              <TeamMember src={Sushma}></TeamMember>
+              <MemberName> Sushma Boddu</MemberName>
+              <TechName> Software Engineer</TechName>
+            </TeamBox>
 
-          <TeamBox>
-          <TeamMember src={Preethi}></TeamMember>
-          <MemberName>Preethi Bandari</MemberName>
-          <TechName>Software Intern</TechName>
-          </TeamBox>
+            <TeamBox>
+              <TeamMember src={Shiva}></TeamMember>
+              <MemberName>ShivaSai Dikonda</MemberName>
+              <TechName> Software Engineer</TechName>
+            </TeamBox>
+
+            <TeamBox>
+              <TeamMember src={Ravalika}></TeamMember>
+              <MemberName>Ravalika Kesari</MemberName>
+              <TechName> Software Engineer</TechName>
+            </TeamBox>
+
+            <TeamBox>
+              <TeamMember src={Vivek} ></TeamMember>
+              <MemberName>Vivek Tej</MemberName>
+              <TechName> Software Intern</TechName>
+            </TeamBox>
+
+            <TeamBox>
+              <TeamMember src={Preethi}></TeamMember>
+              <MemberName>Preethi Bandari</MemberName>
+              <TechName>Software Intern</TechName>
+            </TeamBox>
 
           </MemberContainer>
         </TeamContainer>
-        
+
         <BlogContainer>
           <BlogTitle>Blog</BlogTitle>
           <GroupContainer>
-          <RowBlog>
-            <Group>
-              <BlogImg src={imagepath}></BlogImg>
-            </Group>
-            <GroupTitle>De- Risk your Products with UX Design Experts </GroupTitle>
-            <Date>19 Aug 2020</Date>
-            <Name>Jaya Sagar</Name>
-            <Dept>Technical Department</Dept>
-          </RowBlog>
-          <RowBlog>
-          <Group>
-          <BlogImg src={imagepath}></BlogImg>
-          </Group>
-          <GroupTitle>De- Risk your Products with UX Design Experts </GroupTitle>
-          <Date>19 Aug 2020</Date>
-          <Name>Jaya Sagar</Name>
-          <Dept>Technical Department</Dept>
-          </RowBlog>
+            <RowBlog>
+              <Group>
+                <BlogImg src={imagepath}></BlogImg>
+              </Group>
+              <GroupTitle>De- Risk your Products with UX Design Experts </GroupTitle>
+              <Date>19 Aug 2020</Date>
+              <Name>Jaya Sagar</Name>
+              <Dept>Technical Department</Dept>
+            </RowBlog>
+            <RowBlog>
+              <Group>
+                <BlogImg src={imagepath}></BlogImg>
+              </Group>
+              <GroupTitle>De- Risk your Products with UX Design Experts </GroupTitle>
+              <Date>19 Aug 2020</Date>
+              <Name>Jaya Sagar</Name>
+              <Dept>Technical Department</Dept>
+            </RowBlog>
           </GroupContainer>
         </BlogContainer>
 
-        
+
       </Layout>
     );
   }

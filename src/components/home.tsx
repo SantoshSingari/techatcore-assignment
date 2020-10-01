@@ -41,9 +41,12 @@ const Banner = styled.div`
 `;
 
 const BannerContent = styled.div`
-  padding: 60px 0;
+  padding: 100px 0;
   max-width: 80%;
   margin: 0 auto;
+  @media (max-width:860px){
+    padding:60px 0;
+  }
 `;
 
 const ContentOne = styled(Title)`
@@ -85,6 +88,31 @@ const ContentThree = styled(Button)`
   @media (max-width:480px){
     margin: 30px 0 0;
   }
+`;
+
+const MenuItem = styled(Link)`
+display:none;
+@media (max-width:860px){
+  display:block;
+  text-decoration:none;
+}
+`;
+
+const CareerButton = styled(Button)`
+display:none;
+@media (max-width:860px){
+  display:block;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight:normal;
+  font-size: 28px;
+  line-height:1.5;
+  text-decaration:none;
+  z-index:-4;
+  background:#0078D7;
+  border-radius: 100px;
+  margin: 50px 0 50px;
+}
 `;
 const Container = styled.div`
   width: 106px;
@@ -309,7 +337,7 @@ class Home extends Component {
             <BannerContent id="bContent">
               <Header index={0}></Header>
               <ContentOne>
-                Over decade experience with poly   
+                Over decade experience with poly
                 skills engineering specialists.
               </ContentOne>
               <ContenTwo>
@@ -319,6 +347,9 @@ class Home extends Component {
               <ContentThree width="273px" height="60px" bgColor="#0078D7">
                 WORK WITH US
               </ContentThree>
+              <MenuItem to={"/careers"}>
+                <CareerButton width="273px" height="60px" bgColor="#0078D7">Career</CareerButton>
+              </MenuItem>
             </BannerContent>
             <Link to={"#title"}>
               <Container>
@@ -336,15 +367,15 @@ class Home extends Component {
               <BlockLogo src={Logo1} />
               <BlockTitle>Startup mindset</BlockTitle>
               <BlockDescription>
-                    We enjoy bringing our years of experience into  the startup world,   and we worked with many
-                    startup teams, so we understand the startup realities, and we know what to expect and how to look into their processes, technology, and product quite well.
+                We enjoy bringing our years of experience into  the startup world,   and we worked with many
+                startup teams, so we understand the startup realities, and we know what to expect and how to look into their processes, technology, and product quite well.
               </BlockDescription>
             </Block>
             <Block>
               <BlockLogo src={Logo2} />
               <BlockTitle>Our strategy</BlockTitle>
               <BlockDescription>
-                    There is no single solution, strategy, or approach for any corporates, startup, or individuals. Every situation is unique,
+                There is no single solution, strategy, or approach for any corporates, startup, or individuals. Every situation is unique,
                 and one should approach to solve the problem based on the overall context, situation, and resources at hand. Fail-fast approach, this is where pragmatism comes, and we come into play to help start-ups and corporate to bring this mindset.
               </BlockDescription>
             </Block>
@@ -440,7 +471,7 @@ class Home extends Component {
           <BrandTitle>Brands we worked</BrandTitle>
           <BrandImg src={BrandImgPath}></BrandImg>
         </BrandContainer>
-      <SlideContainer></SlideContainer>
+        <SlideContainer></SlideContainer>
       </Layout>
     );
   }
