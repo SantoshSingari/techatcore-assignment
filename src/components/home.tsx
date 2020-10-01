@@ -216,8 +216,10 @@ const ServicesContainer = styled.div`
   display:flex;
   flex-direction:column;
   justify-content:center;
+  align-content:center;
   align-items:center;
   padding-bottom: 80px;
+  
 `;
 
 const ContainerTitle = styled(Title)`
@@ -225,7 +227,7 @@ const ContainerTitle = styled(Title)`
   text-align: center;
   margin:90px;
   
-  @media (max-width: 800px){
+  @media (max-width: 860px){
     font-size: 30px;
     margin:30px;
     line-height: 1;
@@ -233,9 +235,9 @@ const ContainerTitle = styled(Title)`
 `;
 
 const SubContainer = styled.div`
-  max-width: 941px;
+  width: 941px;
   display: flex;
-  margin-top:50px;
+  margin-top:40px;
   
   @media (max-width: 941px){
     padding: 0 10px;
@@ -256,7 +258,7 @@ const ServiceContentContainer = styled.div`
 const ServiceLogo = styled.img`
   width: 100px;
   height: 100px;
-  margin-right: 50px;
+  margin-right: 40px;
   
   @media (max-width: 480px){
     margin-right: 0;
@@ -273,6 +275,11 @@ const ServiceTitle = styled.h2`
   line-height: 1.5;
   color: #363636;
   margin-bottom: 30px;
+  @media (max-width:860px){
+    width: 268px;
+    height: 64px;
+    font-size:24px;
+  }
 `;
 
 const ServiceDesc = styled.p`
@@ -282,17 +289,25 @@ const ServiceDesc = styled.p`
   font-size: 16px;
   line-height: 1.5;
   color: #000000;
-  margin-bottom: 30px
+  margin-bottom: 30px;
+  @media (max-width:860px){
+   width:264px;
+  }
 `;
 
 const More = styled(Link)`
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.5;
-  text-decoration: none;
-  color: #0078d7;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: #0078d7;
+    @media (max-width:860px){
+      display:flex;
+      align-item:left;
+    }
+  
 `;
 
 const BrandContainer = styled.div`

@@ -253,9 +253,11 @@ const TechDesc = styled.div`
 `;
 
 const TeamContainer = styled.div`
+  width:100%;
   background: #e5e5e5;
   display:flex;
   flex-direction:column;
+  align-items:center;
   justify-content:center;
 `;
 
@@ -268,7 +270,7 @@ const TeamTitle = styled.div`
   line-height: 1.5;
   
   color: #000000;
-  text-align: center;
+  // text-align: center;
   padding: 50px 0;
   
   @media (max-width: 600px){
@@ -277,19 +279,21 @@ const TeamTitle = styled.div`
   }
 `;
 const MemberContainer = styled.div`
+  width:90%;
+  max-width:1280px;
   display:flex;
   flex-flow:row wrap;
-  padding:0px 50px;
-  gap:40px;
-  margin:120px;
+  padding-left:80px;
+  gap:50px;
+  margin:110px;
   @media (max-width:860px){
     margin:10px;
     padding:0px 45px;
   }
 `;
 const TeamBox = styled.div`
-  width:220px;
-  height:320px;
+  width:250px;
+  height:330px;
   @media (max-width:860px){
   width:358px;
   }
@@ -298,7 +302,7 @@ const TeamBox = styled.div`
 
 const TeamMember = styled.img`
   width:100%; 
-  max-width:220px;
+  max-width:250px;
   height:250px;
   background: #ffffff;
   -webkit-filter: grayscale(100%);
