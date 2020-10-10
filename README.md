@@ -1,17 +1,23 @@
-# tac-website
+# t-website
 static website for tech.at.core
 
 ___
 
 ## 🚀Prerequisites
-* Node.js
+* Node.js 
+    - ( version: 12.19.0 )
+    - Directly install node from [Nodejs](https://nodejs.org/en/) 
+    - Installing node using nvm `nvm install 12.19.0` and `nvm use 12.19.0` 
 * gatsby cli: `npm i -g gatsby-cli`
-* typescript: `npm i -g gatsby-plugin-typescript`
 
 ## Setup
-* clone this repo
-* `cd tac-website`
-* npm install
+* clone this repo `git clone https://github.com/Jayasagar/t-website.git`
+* `cd t-website`
+* `npm install`
+    - If `npm install` return any errors install the build-tools especially for windows os
+    - `npm install --global windows-build-tools --vs2015`
+    - After installing build-tools now enter `npm install` it works fine
+* `npm i --save gatsby-cli`
 
 
 ## How to run
